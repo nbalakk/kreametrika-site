@@ -6,15 +6,15 @@
 <title>Из 18 SKU в топ категории за 5 месяцев — кейс Креаметрики</title>
 <meta name="description" content="Кейс бренда ухода за кожей на Wildberries: выручка ×4,1, ДРР −38%, 8 из 18 SKU в топ-20 категории за пять месяцев.">
 <meta name="theme-color" content="#F4F2EE">
-<link rel="canonical" href="https://kreametrika.com/case-cosmetics.html">
+<link rel="canonical" href="https://nbalakk.github.io/kreametrika-site/case-cosmetics.html">
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Креаметрика">
 <meta property="og:title" content="Из 18 SKU в топ категории за 5 месяцев">
 <meta property="og:description" content="Выручка ×4,1, ДРР −38%, конверсия +27 п.п. Как это было сделано.">
-<meta property="og:url" content="https://kreametrika.com/case-cosmetics.html">
-<meta property="og:image" content="https://kreametrika.com/assets/img/og.png">
+<meta property="og:url" content="https://nbalakk.github.io/kreametrika-site/case-cosmetics.html">
+<meta property="og:image" content="https://nbalakk.github.io/kreametrika-site/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="assets/js/main.js" defer></script>
 
@@ -31,15 +32,16 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://kreametrika.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Кейсы", "item": "https://kreametrika.com/cases.html" },
-    { "@type": "ListItem", "position": 3, "name": "Из 18 SKU в топ категории", "item": "https://kreametrika.com/case-cosmetics.html" }
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://nbalakk.github.io/kreametrika-site/" },
+    { "@type": "ListItem", "position": 2, "name": "Кейсы", "item": "https://nbalakk.github.io/kreametrika-site/cases.html" },
+    { "@type": "ListItem", "position": 3, "name": "Из 18 SKU в топ категории", "item": "https://nbalakk.github.io/kreametrika-site/case-cosmetics.html" }
   ]
 }
 </script>
 </head>
 
 <body data-page="cases">
+<div class="progress" aria-hidden="true"></div>
 <a class="skip-link" href="#main">К основному содержанию</a>
 
 <header class="header">
@@ -72,7 +74,7 @@
   <a href="cases.html">Кейсы</a>
   <a href="index.html#pricing">Тарифы</a>
   <a href="contacts.html">Контакты</a>
-  <a href="contacts.html">Обсудить проект</a>
+  <a class="drawer__cta" href="contacts.html">Обсудить проект</a>
   <div class="drawer__foot">
     HELLO@KREAMETRIKA.COM<br>
     +7 495 000-00-00<br>
@@ -90,11 +92,14 @@
   <section class="wrap case-hero">
     <div>
       <p class="eyebrow">Косметика · Wildberries · 2025</p>
-      <h1 class="h1">Из 18 SKU<br>в <span class="accent">топ категории</span></h1>
+      <h1 class="h1" data-reveal="fade">
+        <span class="line"><span>Из 18 SKU</span></span>
+        <span class="line"><span>в <span class="accent">топ категории</span></span></span>
+      </h1>
       <p class="lead lead--case">Бренд ухода за кожей пришёл с плоской выручкой и ДРР 24%. За пять месяцев вывели восемь позиций в топ-20 категории и сделали рекламу управляемой.</p>
     </div>
 
-    <div class="media">
+    <div class="media parallax">
       <img src="assets/img/case-hero.svg" alt="Обложка кейса: съёмка линейки ухода за кожей" width="1600" height="1000">
       <span class="media__sq media__sq--lg-bl" aria-hidden="true"></span>
     </div>
@@ -123,7 +128,7 @@
   </section>
 
   <!-- ------------------------------------------------------------ Задача -->
-  <section class="wrap case-block reveal">
+  <section class="wrap case-block" data-reveal="up">
     <p class="mono case-block__label">Задача</p>
     <div>
       <h2 class="h3">Реклама съедала рост</h2>
@@ -133,11 +138,11 @@
   </section>
 
   <!-- ----------------------------------------------------------- Решение -->
-  <section class="wrap case-block reveal">
+  <section class="wrap case-block" data-reveal="up">
     <p class="mono case-block__label">Решение</p>
     <div>
       <h2 class="h3 h3--gap">Четыре шага за 20 недель</h2>
-      <div class="timeline">
+      <div class="timeline" data-stagger="70">
         <div class="timeline__row">
           <div class="timeline__when">01 · Недели 1—3</div>
           <div class="timeline__what">Unit-экономика по каждому SKU</div>
@@ -163,17 +168,17 @@
   </section>
 
   <!-- --------------------------------------------------------- Галерея -->
-  <section class="wrap gallery reveal">
-    <div class="media">
+  <section class="wrap gallery" data-stagger="120">
+    <div class="media parallax">
       <img src="assets/img/case-g1.svg" alt="Карточки товара до и после переработки" width="1200" height="800" loading="lazy">
     </div>
-    <div class="media">
+    <div class="media parallax">
       <img src="assets/img/case-g2.svg" alt="Съёмка линейки для маркетплейса" width="1200" height="800" loading="lazy">
     </div>
   </section>
 
   <!-- --------------------------------------------------- Что не сработало -->
-  <section class="wrap case-block reveal">
+  <section class="wrap case-block" data-reveal="up">
     <p class="mono case-block__label">Что не сработало</p>
     <div>
       <h2 class="h3">Две гипотезы из семи</h2>
@@ -182,8 +187,8 @@
   </section>
 
   <!-- ------------------------------------------------------------ Цитата -->
-  <section class="wrap section reveal">
-    <figure class="pullquote">
+  <section class="wrap section" data-reveal="up">
+    <figure class="pullquote" data-reveal="up">
       <blockquote><p>«Мы впервые увидели, сколько зарабатывает каждая позиция. Решение сократить ассортимент было неочевидным — и оно дало главный прирост».</p></blockquote>
       <figcaption class="mono mono--xs">Марина Долгова · основатель бренда</figcaption>
     </figure>
@@ -203,7 +208,7 @@
   </section>
 
   <!-- ------------------------------------------------------------ Заявка -->
-  <section class="form-band reveal">
+  <section class="form-band" data-reveal="fade">
     <div class="wrap form-layout">
       <div>
         <p class="eyebrow eyebrow--light">Заявка</p>

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /privacy.html
 
-Sitemap: https://kreametrika.com/sitemap.xml
+Sitemap: https://nbalakk.github.io/kreametrika-site/sitemap.xml

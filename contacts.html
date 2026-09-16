@@ -6,15 +6,15 @@
 <title>Контакты — Креаметрика</title>
 <meta name="description" content="Свяжитесь с агентством Креаметрика: hello@kreametrika.com, +7 495 000-00-00, Москва, Большая Новодмитровская 36. Ответим в течение рабочего дня.">
 <meta name="theme-color" content="#F4F2EE">
-<link rel="canonical" href="https://kreametrika.com/contacts.html">
+<link rel="canonical" href="https://nbalakk.github.io/kreametrika-site/contacts.html">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Креаметрика">
 <meta property="og:title" content="Контакты — Креаметрика">
 <meta property="og:description" content="Расскажите про товар и объёмы — пришлём оценку потенциала роста и план первых 30 дней.">
-<meta property="og:url" content="https://kreametrika.com/contacts.html">
-<meta property="og:image" content="https://kreametrika.com/assets/img/og.png">
+<meta property="og:url" content="https://nbalakk.github.io/kreametrika-site/contacts.html">
+<meta property="og:image" content="https://nbalakk.github.io/kreametrika-site/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -23,11 +23,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="assets/js/main.js" defer></script>
 </head>
 
 <body data-page="contacts">
+<div class="progress" aria-hidden="true"></div>
 <a class="skip-link" href="#main">К основному содержанию</a>
 
 <header class="header">
@@ -60,7 +62,7 @@
   <a href="cases.html">Кейсы</a>
   <a href="index.html#pricing">Тарифы</a>
   <a href="contacts.html">Контакты</a>
-  <a href="#form">Обсудить проект</a>
+  <a class="drawer__cta" href="#form">Обсудить проект</a>
   <div class="drawer__foot">
     HELLO@KREAMETRIKA.COM<br>
     +7 495 000-00-00<br>
@@ -73,10 +75,12 @@
 
     <div>
       <p class="eyebrow">Контакты</p>
-      <h1 class="h1">Давайте <span class="accent">поговорим</span></h1>
+      <h1 class="h1" data-reveal="fade">
+        <span class="line"><span>Давайте <span class="accent">поговорим</span></span></span>
+      </h1>
       <p class="lead lead--top">Расскажите про товар и текущие объёмы — пришлём оценку потенциала роста и план первых 30 дней.</p>
 
-      <div class="info">
+      <div class="info" data-stagger="70">
         <div class="info__row">
           <div class="mono mono--xs">Почта</div>
           <a class="info__value" href="mailto:hello@kreametrika.com">hello@kreametrika.com</a>
@@ -100,7 +104,7 @@
       </div>
     </div>
 
-    <div class="form-card" id="form">
+    <div class="form-card" id="form" data-reveal="up">
       <p class="eyebrow eyebrow--light">Заявка · ответ в течение дня</p>
 
       <form class="form" data-form="contacts" novalidate>
@@ -146,7 +150,7 @@
 
   </div>
 
-  <div class="map">
+  <div class="map parallax" data-reveal="fade">
     <img src="assets/img/map.svg" alt="Схема расположения офиса: Москва, Большая Новодмитровская 36" width="1600" height="640" loading="lazy">
     <span class="media__sq media__sq--corner-tl" aria-hidden="true"></span>
   </div>

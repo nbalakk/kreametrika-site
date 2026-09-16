@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Плейсхолдер изображения">
 <rect width="1200" height="800" fill="#0E0E0E"/>
-<polygon points="578,0 889,0 1395,800 1084,800" fill="#FFFFFF" opacity="0.058"/>
-<polygon points="760,0 923,0 1293,800 1130,800" fill="#FFFFFF" opacity="0.068"/>
-<polygon points="788,0 1067,0 1825,800 1546,800" fill="#FFFFFF" opacity="0.061"/>
-<polygon points="993,0 1232,0 1615,800 1375,800" fill="#FFFFFF" opacity="0.082"/>
-<polygon points="412,0 789,0 1126,800 749,800" fill="#FFFFFF" opacity="0.04"/>
-<rect x="145" y="91" width="202" height="219" fill="#EF3124"/>
+<polygon points="965,0 1327,0 2073,800 1711,800" fill="#FFFFFF" opacity="0.102"/>
+<polygon points="176,0 563,0 1361,800 974,800" fill="#FFFFFF" opacity="0.062"/>
+<polygon points="-185,0 78,0 935,800 672,800" fill="#FFFFFF" opacity="0.053"/>
+<polygon points="-315,0 36,0 816,800 465,800" fill="#FFFFFF" opacity="0.09"/>
+<polygon points="994,0 1389,0 2044,800 1649,800" fill="#FFFFFF" opacity="0.094"/>
+<rect x="244" y="333" width="228" height="265" fill="#FFFFFF" opacity="0.151"/>
 <g stroke="#FFFFFF" stroke-width="1" opacity="0.05"><line x1="0" y1="100" x2="1200" y2="100"/><line x1="0" y1="200" x2="1200" y2="200"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="400" x2="1200" y2="400"/><line x1="0" y1="500" x2="1200" y2="500"/><line x1="0" y1="600" x2="1200" y2="600"/><line x1="0" y1="700" x2="1200" y2="700"/></g>
-<text x="60" y="740" fill="#FFFFFF" opacity="0.72" font-family="JetBrains Mono, ui-monospace, monospace" font-size="26" letter-spacing="3.6">КАРТОЧКИ ДО / ПОСЛЕ</text>
-<text x="60" y="691" fill="#EF3124" font-family="JetBrains Mono, ui-monospace, monospace" font-size="21" letter-spacing="3.1">1200×800</text>
+<text x="600" y="400" fill="#FFFFFF" opacity="0.55" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="22" letter-spacing="3.5">КАРТОЧКИ ДО / ПОСЛЕ</text>
+<text x="600" y="446" fill="#FFFFFF" opacity="0.3" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="17" letter-spacing="2.6">1200×800</text>
 </svg>

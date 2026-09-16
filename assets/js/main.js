@@ -29,15 +29,45 @@
     var drawer = document.getElementById('drawer');
     if (!burger || !drawer) return;
 
+    var savedScroll = 0;
+
     function setOpen(open) {
       burger.setAttribute('aria-expanded', String(open));
       drawer.classList.toggle('is-open', open);
-      document.body.classList.toggle('is-locked', open);
+
+      // overflow:hidden в iOS Safari прокрутку не держит — фиксируем body
+      // и возвращаем позицию при закрытии.
       if (open) {
+        savedScroll = window.scrollY;
+        document.body.style.top = -savedScroll + 'px';
+        document.body.classList.add('is-locked');
         var first = drawer.querySelector('a');
         if (first) first.focus();
+      } else {
+        document.body.classList.remove('is-locked');
+        document.body.style.top = '';
+        // Именно instant: со smooth-прокруткой страница поехала бы обратно
+        // на глазах у пользователя вместо мгновенного возврата.
+        window.scrollTo({ top: savedScroll, behavior: 'instant' });
       }
     }
+
+    // Пока шторка открыта, Tab не должен уводить фокус на страницу за ней
+    drawer.addEventListener('keydown', function (e) {
+      if (e.key !== 'Tab') return;
+      var focusable = drawer.querySelectorAll('a[href]');
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        burger.focus();
+      }
+    });
 
     burger.addEventListener('click', function () {
       setOpen(burger.getAttribute('aria-expanded') !== 'true');
@@ -62,7 +92,16 @@
 
   /* ------------------------------------------- 3. Появление блоков при скролле */
   (function reveal() {
-    var items = document.querySelectorAll('.reveal');
+    var items = document.querySelectorAll('[data-reveal]');
+
+    // Внутри группы элементы выезжают по очереди, а не все разом
+    document.querySelectorAll('[data-stagger]').forEach(function (group) {
+      var step = parseInt(group.dataset.stagger, 10) || 90;
+      Array.prototype.forEach.call(group.children, function (child, i) {
+        child.style.setProperty('--delay', (i * step) + 'ms');
+      });
+    });
+
     if (!items.length) return;
 
     if (reduceMotion || !('IntersectionObserver' in window)) {
@@ -76,12 +115,51 @@
         entry.target.classList.add('is-visible');
         io.unobserve(entry.target);
       });
-    }, { rootMargin: '0px 0px -12% 0px' });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
 
     items.forEach(function (el) { io.observe(el); });
   })();
 
-  /* ------------------------------------------------- 4. Счётчики в цифрах */
+  /* ------------------------------------------------- 4. Вступление первого экрана */
+  (function intro() {
+    var hero = document.querySelector('[data-intro]');
+    if (!hero) return;
+
+    function start() { hero.classList.add('is-intro'); }
+
+    // Ждём кадр, чтобы стартовые состояния успели примениться до анимации.
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(start);
+    });
+
+    // Кадры могут быть заморожены (вкладка открыта в фоне) — тогда первый экран
+    // просто появится без анимации, но появится обязательно.
+    window.setTimeout(start, 400);
+  })();
+
+  /* ------------------------------------------------------ 5. Полоса прогресса */
+  (function progress() {
+    var bar = document.querySelector('.progress');
+    if (!bar || reduceMotion) return;
+
+    // В браузерах со скролл-таймлайнами полосу двигает CSS — JS не нужен
+    if (window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()')) return;
+
+    var ticking = false;
+    function update() {
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - doc.clientHeight;
+      bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(window.scrollY / max, 1) : 0) + ')';
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  })();
+
+  /* ------------------------------------------------- 6. Счётчики в цифрах */
   (function counters() {
     var nodes = document.querySelectorAll('[data-count]');
     if (!nodes.length) return;
@@ -144,7 +222,7 @@
     nodes.forEach(function (el) { io.observe(el); });
   })();
 
-  /* ------------------------------------------------------------- 5. FAQ */
+  /* ------------------------------------------------------------- 7. FAQ */
   (function faq() {
     var buttons = document.querySelectorAll('.faq__btn');
     if (!buttons.length) return;
@@ -169,7 +247,7 @@
     });
   })();
 
-  /* -------------------------------------------------- 6. Фильтр кейсов */
+  /* -------------------------------------------------- 8. Фильтр кейсов */
   (function caseFilter() {
     var bar = document.querySelector('[data-filters]');
     if (!bar) return;
@@ -211,7 +289,7 @@
     apply(initial);
   })();
 
-  /* --------------------------------------------- 7. Чипы-переключатели формы */
+  /* --------------------------------------------- 9. Чипы-переключатели формы */
   (function choices() {
     var groups = document.querySelectorAll('.choices');
     if (!groups.length) return;
@@ -231,7 +309,7 @@
     });
   })();
 
-  /* ------------------------------------------------------- 8. Формы заявки */
+  /* ------------------------------------------------------- 10. Формы заявки */
   (function forms() {
     var forms = document.querySelectorAll('form[data-form]');
     if (!forms.length) return;
@@ -319,7 +397,7 @@
     });
   })();
 
-  /* --------------------------------------------------------- 9. Мелочи */
+  /* --------------------------------------------------------- 11. Мелочи */
   (function misc() {
     // Год в подвале
     document.querySelectorAll('[data-year]').forEach(function (el) {

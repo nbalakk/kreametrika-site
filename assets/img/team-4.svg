@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200" role="img" aria-label="Плейсхолдер изображения">
 <rect width="900" height="1200" fill="#0E0E0E"/>
-<polygon points="-132,0 1,0 531,1200 398,1200" fill="#FFFFFF" opacity="0.05"/>
-<polygon points="-88,0 203,0 506,1200 215,1200" fill="#FFFFFF" opacity="0.077"/>
-<polygon points="205,0 366,0 759,1200 598,1200" fill="#FFFFFF" opacity="0.058"/>
-<polygon points="-85,0 209,0 501,1200 207,1200" fill="#FFFFFF" opacity="0.09"/>
-<rect x="73" y="545" width="258" height="313" fill="#EF3124"/>
+<polygon points="85,0 272,0 777,1200 591,1200" fill="#FFFFFF" opacity="0.066"/>
+<polygon points="-277,0 -86,0 289,1200 98,1200" fill="#FFFFFF" opacity="0.048"/>
+<polygon points="658,0 851,0 1431,1200 1238,1200" fill="#FFFFFF" opacity="0.089"/>
+<polygon points="-64,0 239,0 597,1200 294,1200" fill="#FFFFFF" opacity="0.087"/>
+<polygon points="504,0 622,0 862,1200 744,1200" fill="#FFFFFF" opacity="0.049"/>
+<rect x="194" y="554" width="208" height="193" fill="#FFFFFF" opacity="0.114"/>
 <g stroke="#FFFFFF" stroke-width="1" opacity="0.05"><line x1="0" y1="100" x2="900" y2="100"/><line x1="0" y1="200" x2="900" y2="200"/><line x1="0" y1="300" x2="900" y2="300"/><line x1="0" y1="400" x2="900" y2="400"/><line x1="0" y1="500" x2="900" y2="500"/><line x1="0" y1="600" x2="900" y2="600"/><line x1="0" y1="700" x2="900" y2="700"/><line x1="0" y1="800" x2="900" y2="800"/><line x1="0" y1="900" x2="900" y2="900"/><line x1="0" y1="1000" x2="900" y2="1000"/><line x1="0" y1="1100" x2="900" y2="1100"/></g>
-<text x="45" y="1155" fill="#FFFFFF" opacity="0.72" font-family="JetBrains Mono, ui-monospace, monospace" font-size="20" letter-spacing="2.8">ПОРТРЕТ</text>
-<text x="45" y="1117" fill="#EF3124" font-family="JetBrains Mono, ui-monospace, monospace" font-size="16" letter-spacing="2.4">900×1200</text>
+<text x="450" y="600" fill="#FFFFFF" opacity="0.55" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="25" letter-spacing="4.0">ПОРТРЕТ</text>
+<text x="450" y="652" fill="#FFFFFF" opacity="0.3" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="20" letter-spacing="3.0">900×1200</text>
 </svg>

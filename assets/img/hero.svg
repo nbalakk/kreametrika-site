@@ -1,10 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img" aria-label="Плейсхолдер изображения">
 <rect width="1200" height="1500" fill="#0E0E0E"/>
-<polygon points="470,0 750,0 1194,1500 913,1500" fill="#FFFFFF" opacity="0.078"/>
-<polygon points="-18,0 360,0 1037,1500 659,1500" fill="#FFFFFF" opacity="0.073"/>
-<polygon points="-19,0 308,0 928,1500 602,1500" fill="#FFFFFF" opacity="0.055"/>
-<rect x="684" y="704" width="288" height="266" fill="#EF3124"/>
+<polygon points="197,0 438,0 1304,1500 1063,1500" fill="#FFFFFF" opacity="0.076"/>
+<polygon points="425,0 571,0 1038,1500 891,1500" fill="#FFFFFF" opacity="0.061"/>
+<polygon points="340,0 577,0 1079,1500 842,1500" fill="#FFFFFF" opacity="0.075"/>
+<polygon points="171,0 452,0 869,1500 588,1500" fill="#FFFFFF" opacity="0.062"/>
+<polygon points="-323,0 27,0 752,1500 402,1500" fill="#FFFFFF" opacity="0.075"/>
+<rect x="167" y="566" width="209" height="252" fill="#FFFFFF" opacity="0.127"/>
 <g stroke="#FFFFFF" stroke-width="1" opacity="0.05"><line x1="0" y1="125" x2="1200" y2="125"/><line x1="0" y1="250" x2="1200" y2="250"/><line x1="0" y1="375" x2="1200" y2="375"/><line x1="0" y1="500" x2="1200" y2="500"/><line x1="0" y1="625" x2="1200" y2="625"/><line x1="0" y1="750" x2="1200" y2="750"/><line x1="0" y1="875" x2="1200" y2="875"/><line x1="0" y1="1000" x2="1200" y2="1000"/><line x1="0" y1="1125" x2="1200" y2="1125"/><line x1="0" y1="1250" x2="1200" y2="1250"/><line x1="0" y1="1375" x2="1200" y2="1375"/></g>
-<text x="60" y="1440" fill="#FFFFFF" opacity="0.72" font-family="JetBrains Mono, ui-monospace, monospace" font-size="26" letter-spacing="3.6">ПОРТРЕТ · ГЕРОЙ</text>
-<text x="60" y="1391" fill="#EF3124" font-family="JetBrains Mono, ui-monospace, monospace" font-size="21" letter-spacing="3.1">1200×1500</text>
+<text x="600" y="750" fill="#FFFFFF" opacity="0.55" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="34" letter-spacing="5.4">ПОРТРЕТ · ГЕРОЙ</text>
+<text x="600" y="821" fill="#FFFFFF" opacity="0.3" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="27" letter-spacing="4.1">1200×1500</text>
 </svg>

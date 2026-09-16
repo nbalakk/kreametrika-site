@@ -12,11 +12,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="assets/js/main.js" defer></script>
 </head>
 
 <body data-page="404">
+<div class="progress" aria-hidden="true"></div>
 <a class="skip-link" href="#main">К основному содержанию</a>
 
 <header class="header">
@@ -49,7 +51,7 @@
   <a href="cases.html">Кейсы</a>
   <a href="index.html#pricing">Тарифы</a>
   <a href="contacts.html">Контакты</a>
-  <a href="contacts.html#form">Обсудить проект</a>
+  <a class="drawer__cta" href="contacts.html#form">Обсудить проект</a>
   <div class="drawer__foot">
     HELLO@KREAMETRIKA.COM<br>
     +7 495 000-00-00<br>
@@ -57,7 +59,7 @@
   </div>
 </div>
 
-<main class="wrap error-page" id="main">
+<main class="wrap error-page" id="main" data-stagger="90">
   <p class="eyebrow eyebrow--flag">Ошибка 404</p>
   <div class="code">404</div>
   <h1 class="h2 error-title">Страница не <span class="accent">нашлась</span></h1>

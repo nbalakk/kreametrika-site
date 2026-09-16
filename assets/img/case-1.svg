@@ -1,11 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Плейсхолдер изображения">
 <rect width="1200" height="900" fill="#0E0E0E"/>
-<polygon points="429,0 637,0 1399,900 1191,900" fill="#FFFFFF" opacity="0.048"/>
-<polygon points="362,0 626,0 1239,900 975,900" fill="#FFFFFF" opacity="0.051"/>
-<polygon points="32,0 211,0 842,900 662,900" fill="#FFFFFF" opacity="0.042"/>
-<polygon points="48,0 419,0 1016,900 646,900" fill="#FFFFFF" opacity="0.099"/>
-<rect x="548" y="264" width="215" height="178" fill="#EF3124"/>
+<polygon points="-69,0 177,0 482,900 236,900" fill="#FFFFFF" opacity="0.088"/>
+<polygon points="122,0 468,0 804,900 457,900" fill="#FFFFFF" opacity="0.109"/>
+<polygon points="976,0 1170,0 1924,900 1729,900" fill="#FFFFFF" opacity="0.048"/>
+<rect x="344" y="210" width="155" height="157" fill="#FFFFFF" opacity="0.105"/>
 <g stroke="#FFFFFF" stroke-width="1" opacity="0.05"><line x1="0" y1="100" x2="1200" y2="100"/><line x1="0" y1="200" x2="1200" y2="200"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="400" x2="1200" y2="400"/><line x1="0" y1="500" x2="1200" y2="500"/><line x1="0" y1="600" x2="1200" y2="600"/><line x1="0" y1="700" x2="1200" y2="700"/><line x1="0" y1="800" x2="1200" y2="800"/></g>
-<text x="60" y="840" fill="#FFFFFF" opacity="0.72" font-family="JetBrains Mono, ui-monospace, monospace" font-size="26" letter-spacing="3.6">КОСМЕТИКА</text>
-<text x="60" y="791" fill="#EF3124" font-family="JetBrains Mono, ui-monospace, monospace" font-size="21" letter-spacing="3.1">1200×900</text>
+<text x="600" y="450" fill="#FFFFFF" opacity="0.55" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="25" letter-spacing="4.0">КОСМЕТИКА</text>
+<text x="600" y="502" fill="#FFFFFF" opacity="0.3" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="20" letter-spacing="3.0">1200×900</text>
 </svg>

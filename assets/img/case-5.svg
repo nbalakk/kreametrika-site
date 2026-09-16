@@ -1,12 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Плейсхолдер изображения">
 <rect width="1200" height="900" fill="#0E0E0E"/>
-<polygon points="-32,0 288,0 1038,900 718,900" fill="#FFFFFF" opacity="0.069"/>
-<polygon points="347,0 525,0 1091,900 912,900" fill="#FFFFFF" opacity="0.086"/>
-<polygon points="936,0 1229,0 1830,900 1537,900" fill="#FFFFFF" opacity="0.095"/>
-<polygon points="-98,0 235,0 776,900 443,900" fill="#FFFFFF" opacity="0.099"/>
-<polygon points="557,0 853,0 1554,900 1259,900" fill="#FFFFFF" opacity="0.069"/>
-<rect x="351" y="132" width="195" height="193" fill="#EF3124"/>
+<polygon points="346,0 742,0 1442,900 1047,900" fill="#FFFFFF" opacity="0.063"/>
+<polygon points="-74,0 113,0 732,900 545,900" fill="#FFFFFF" opacity="0.051"/>
+<polygon points="384,0 563,0 1224,900 1045,900" fill="#FFFFFF" opacity="0.061"/>
+<rect x="104" y="403" width="180" height="182" fill="#FFFFFF" opacity="0.128"/>
 <g stroke="#FFFFFF" stroke-width="1" opacity="0.05"><line x1="0" y1="100" x2="1200" y2="100"/><line x1="0" y1="200" x2="1200" y2="200"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="400" x2="1200" y2="400"/><line x1="0" y1="500" x2="1200" y2="500"/><line x1="0" y1="600" x2="1200" y2="600"/><line x1="0" y1="700" x2="1200" y2="700"/><line x1="0" y1="800" x2="1200" y2="800"/></g>
-<text x="60" y="840" fill="#FFFFFF" opacity="0.72" font-family="JetBrains Mono, ui-monospace, monospace" font-size="26" letter-spacing="3.6">СПОРТ</text>
-<text x="60" y="791" fill="#EF3124" font-family="JetBrains Mono, ui-monospace, monospace" font-size="21" letter-spacing="3.1">1200×900</text>
+<text x="600" y="450" fill="#FFFFFF" opacity="0.55" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="25" letter-spacing="4.0">СПОРТ</text>
+<text x="600" y="502" fill="#FFFFFF" opacity="0.3" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="20" letter-spacing="3.0">1200×900</text>
 </svg>
