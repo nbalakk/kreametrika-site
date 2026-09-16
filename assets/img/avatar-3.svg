@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Плейсхолдер изображения">
+<rect width="200" height="200" fill="#0E0E0E"/>
+<polygon points="88,0 113,0 214,200 189,200" fill="#FFFFFF" opacity="0.071"/>
+<polygon points="-27,0 35,0 140,200 77,200" fill="#FFFFFF" opacity="0.048"/>
+<polygon points="127,0 170,0 245,200 203,200" fill="#FFFFFF" opacity="0.051"/>
+<polygon points="104,0 153,0 247,200 199,200" fill="#FFFFFF" opacity="0.047"/>
+<polygon points="18,0 70,0 192,200 141,200" fill="#FFFFFF" opacity="0.052"/>
+<rect x="45" y="63" width="46" height="51" fill="#EF3124"/>
+<g stroke="#FFFFFF" stroke-width="1" opacity="0.05"><line x1="0" y1="17" x2="200" y2="17"/><line x1="0" y1="33" x2="200" y2="33"/><line x1="0" y1="50" x2="200" y2="50"/><line x1="0" y1="67" x2="200" y2="67"/><line x1="0" y1="83" x2="200" y2="83"/><line x1="0" y1="100" x2="200" y2="100"/><line x1="0" y1="117" x2="200" y2="117"/><line x1="0" y1="133" x2="200" y2="133"/><line x1="0" y1="150" x2="200" y2="150"/><line x1="0" y1="167" x2="200" y2="167"/><line x1="0" y1="183" x2="200" y2="183"/><line x1="0" y1="200" x2="200" y2="200"/></g>
+</svg>

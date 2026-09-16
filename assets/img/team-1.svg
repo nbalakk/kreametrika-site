@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200" role="img" aria-label="Плейсхолдер изображения">
+<rect width="900" height="1200" fill="#0E0E0E"/>
+<polygon points="168,0 429,0 1013,1200 752,1200" fill="#FFFFFF" opacity="0.065"/>
+<polygon points="-191,0 -62,0 491,1200 362,1200" fill="#FFFFFF" opacity="0.084"/>
+<polygon points="217,0 452,0 1105,1200 870,1200" fill="#FFFFFF" opacity="0.051"/>
+<polygon points="541,0 845,0 1307,1200 1002,1200" fill="#FFFFFF" opacity="0.084"/>
+<polygon points="-245,0 -130,0 521,1200 406,1200" fill="#FFFFFF" opacity="0.037"/>
+<rect x="104" y="593" width="166" height="212" fill="#EF3124"/>
+<g stroke="#FFFFFF" stroke-width="1" opacity="0.05"><line x1="0" y1="100" x2="900" y2="100"/><line x1="0" y1="200" x2="900" y2="200"/><line x1="0" y1="300" x2="900" y2="300"/><line x1="0" y1="400" x2="900" y2="400"/><line x1="0" y1="500" x2="900" y2="500"/><line x1="0" y1="600" x2="900" y2="600"/><line x1="0" y1="700" x2="900" y2="700"/><line x1="0" y1="800" x2="900" y2="800"/><line x1="0" y1="900" x2="900" y2="900"/><line x1="0" y1="1000" x2="900" y2="1000"/><line x1="0" y1="1100" x2="900" y2="1100"/></g>
+<text x="45" y="1155" fill="#FFFFFF" opacity="0.72" font-family="JetBrains Mono, ui-monospace, monospace" font-size="20" letter-spacing="2.8">ПОРТРЕТ</text>
+<text x="45" y="1117" fill="#EF3124" font-family="JetBrains Mono, ui-monospace, monospace" font-size="16" letter-spacing="2.4">900×1200</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Плейсхолдер изображения">
+<rect width="1200" height="900" fill="#0E0E0E"/>
+<polygon points="885,0 1095,0 1401,900 1192,900" fill="#FFFFFF" opacity="0.052"/>
+<polygon points="1,0 367,0 697,900 331,900" fill="#FFFFFF" opacity="0.066"/>
+<polygon points="-180,0 31,0 649,900 438,900" fill="#FFFFFF" opacity="0.093"/>
+<polygon points="243,0 645,0 1355,900 954,900" fill="#FFFFFF" opacity="0.063"/>
+<rect x="328" y="301" width="155" height="155" fill="#EF3124"/>
+<g stroke="#FFFFFF" stroke-width="1" opacity="0.05"><line x1="0" y1="100" x2="1200" y2="100"/><line x1="0" y1="200" x2="1200" y2="200"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="400" x2="1200" y2="400"/><line x1="0" y1="500" x2="1200" y2="500"/><line x1="0" y1="600" x2="1200" y2="600"/><line x1="0" y1="700" x2="1200" y2="700"/><line x1="0" y1="800" x2="1200" y2="800"/></g>
+<text x="60" y="840" fill="#FFFFFF" opacity="0.72" font-family="JetBrains Mono, ui-monospace, monospace" font-size="26" letter-spacing="3.6">ДЕТСКИЕ ТОВАРЫ</text>
+<text x="60" y="791" fill="#EF3124" font-family="JetBrains Mono, ui-monospace, monospace" font-size="21" letter-spacing="3.1">1200×900</text>
+</svg>

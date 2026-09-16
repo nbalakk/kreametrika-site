@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Плейсхолдер изображения">
+<rect width="1600" height="1000" fill="#0E0E0E"/>
+<polygon points="-449,0 -142,0 589,1000 282,1000" fill="#FFFFFF" opacity="0.046"/>
+<polygon points="1030,0 1435,0 2207,1000 1802,1000" fill="#FFFFFF" opacity="0.076"/>
+<polygon points="221,0 690,0 1109,1000 640,1000" fill="#FFFFFF" opacity="0.073"/>
+<polygon points="645,0 1084,0 1984,1000 1545,1000" fill="#FFFFFF" opacity="0.089"/>
+<rect x="862" y="472" width="298" height="360" fill="#EF3124"/>
+<g stroke="#FFFFFF" stroke-width="1" opacity="0.05"><line x1="0" y1="133" x2="1600" y2="133"/><line x1="0" y1="267" x2="1600" y2="267"/><line x1="0" y1="400" x2="1600" y2="400"/><line x1="0" y1="533" x2="1600" y2="533"/><line x1="0" y1="667" x2="1600" y2="667"/><line x1="0" y1="800" x2="1600" y2="800"/><line x1="0" y1="933" x2="1600" y2="933"/></g>
+<text x="80" y="920" fill="#FFFFFF" opacity="0.72" font-family="JetBrains Mono, ui-monospace, monospace" font-size="35" letter-spacing="4.9">ОБЛОЖКА КЕЙСА</text>
+<text x="80" y="854" fill="#EF3124" font-family="JetBrains Mono, ui-monospace, monospace" font-size="28" letter-spacing="4.2">1600×1000</text>
+</svg>

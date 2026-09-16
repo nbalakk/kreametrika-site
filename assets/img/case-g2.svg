@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Плейсхолдер изображения">
+<rect width="1200" height="800" fill="#0E0E0E"/>
+<polygon points="1058,0 1221,0 1656,800 1493,800" fill="#FFFFFF" opacity="0.093"/>
+<polygon points="837,0 1147,0 1911,800 1601,800" fill="#FFFFFF" opacity="0.079"/>
+<polygon points="-386,0 12,0 425,800 28,800" fill="#FFFFFF" opacity="0.058"/>
+<polygon points="829,0 1085,0 1641,800 1385,800" fill="#FFFFFF" opacity="0.052"/>
+<rect x="700" y="406" width="152" height="168" fill="#EF3124"/>
+<g stroke="#FFFFFF" stroke-width="1" opacity="0.05"><line x1="0" y1="100" x2="1200" y2="100"/><line x1="0" y1="200" x2="1200" y2="200"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="400" x2="1200" y2="400"/><line x1="0" y1="500" x2="1200" y2="500"/><line x1="0" y1="600" x2="1200" y2="600"/><line x1="0" y1="700" x2="1200" y2="700"/></g>
+<text x="60" y="740" fill="#FFFFFF" opacity="0.72" font-family="JetBrains Mono, ui-monospace, monospace" font-size="26" letter-spacing="3.6">СЪЁМКА ЛИНЕЙКИ</text>
+<text x="60" y="691" fill="#EF3124" font-family="JetBrains Mono, ui-monospace, monospace" font-size="21" letter-spacing="3.1">1200×800</text>
+</svg>
