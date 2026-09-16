@@ -7,6 +7,13 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Страховка: начальные состояния анимаций живут под классом js. Если скрипт
+  // где-то упадёт, класс снимается — и страница остаётся видимой целиком,
+  // просто без движения. Пустых экранов быть не должно ни при каких ошибках.
+  window.addEventListener('error', function () {
+    document.documentElement.classList.remove('js');
+  });
+
   /* ------------------------------------------------ 1. Тень у липкой шапки */
   (function stickyHeader() {
     var header = document.querySelector('.header');
@@ -92,7 +99,13 @@
 
   /* ------------------------------------------- 3. Появление блоков при скролле */
   (function reveal() {
-    var items = document.querySelectorAll('[data-reveal]');
+    // Показа ждут оба типа блоков: одиночные (data-reveal) и сетки (data-stagger),
+    // у которых скрыты дети. Пропустить любой из них — значит оставить кусок
+    // страницы пустым, поэтому список собирается одним запросом.
+    var pending = Array.prototype.slice.call(
+      document.querySelectorAll('[data-reveal], [data-stagger]')
+    );
+    if (!pending.length) return;
 
     // Внутри группы элементы выезжают по очереди, а не все разом
     document.querySelectorAll('[data-stagger]').forEach(function (group) {
@@ -102,22 +115,41 @@
       });
     });
 
-    if (!items.length) return;
-
-    if (reduceMotion || !('IntersectionObserver' in window)) {
-      items.forEach(function (el) { el.classList.add('is-visible'); });
-      return;
+    function showAll() {
+      pending.forEach(function (el) { el.classList.add('is-visible'); });
+      pending = [];
     }
 
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
-      });
-    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    if (reduceMotion) { showAll(); return; }
 
-    items.forEach(function (el) { io.observe(el); });
+    var last = 0;
+
+    // Проверяем геометрией, а не наблюдателем: так блок не может «потеряться»,
+    // если событие не пришло, и поведение одинаково во всех браузерах.
+    function sweep() {
+      var limit = window.innerHeight * 0.92;
+      pending = pending.filter(function (el) {
+        if (el.getBoundingClientRect().top > limit) return true;
+        el.classList.add('is-visible');
+        return false;
+      });
+      if (!pending.length) {
+        window.removeEventListener('scroll', onScroll);
+        window.removeEventListener('resize', sweep);
+      }
+    }
+
+    function onScroll() {
+      var now = Date.now();
+      if (now - last < 90) return;   // не чаще ~11 раз в секунду
+      last = now;
+      sweep();
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', sweep, { passive: true });
+    window.addEventListener('load', sweep);
+    sweep();
   })();
 
   /* ------------------------------------------------- 4. Вступление первого экрана */
