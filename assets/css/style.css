@@ -12,8 +12,8 @@
   --ink-line: #35322E;
   --paper: #F4F2EE;
   --white: #FFFFFF;
-  --accent: #EF3124;
-  --accent-dark: #D92B1C;
+  --accent: #F8211F;      /* из векторов бренда, brand/logo */
+  --accent-dark: #D01A18;
   --muted: #6B6762;
   --dim: #8C8880;
   --dim-2: #B5B0AA;
@@ -28,7 +28,7 @@
   --wrap: 1280px;
   --gutter: 28px;
   --section-gap: 96px;
-  --header-h: 74px;
+  --header-h: 76px;
 
   /* Прочее */
   --radius: 4px;
@@ -192,22 +192,26 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .band a:hover { color: var(--accent); }
 
 /* ------------------------------------------------------------- 4. Логотип */
-.logo { display: inline-flex; align-items: center; gap: 12px; line-height: 1; padding: 6px 0; }
-.logo__mark { width: 34px; height: 34px; flex: none; }
-.logo__name {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: -.02em;
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  line-height: 1;
+  padding: 4px 0;
 }
+/* Высота подобрана так, чтобы липкая шапка осталась прежней высоты:
+   лакап со знаком выше, чем набранное шрифтом название. Ширина — от
+   пропорций файла (1322.6 x 200). */
+.logo__lockup { height: 30px; width: auto; }
+.logo__lockup--footer { height: 40px; }
 .logo__tag {
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: .18em;
   color: var(--muted);
-  margin-top: 3px;
 }
-.logo:hover { color: inherit; }
+.logo:hover { color: inherit; opacity: .82; transition: opacity var(--t); }
 
 /* -------------------------------------------------------------- 5. Кнопки */
 .btn {
@@ -889,7 +893,7 @@ button, input, textarea, select { font: inherit; color: inherit; }
   display: none;
   border-left: 3px solid var(--accent);
   padding: 16px 20px;
-  background: rgba(239, 49, 36, .1);
+  background: rgba(248, 33, 31, .1);
   font-size: 14px;
   line-height: 1.5;
 }
@@ -1261,9 +1265,9 @@ button, input, textarea, select { font: inherit; color: inherit; }
 
   /* Шапка: логотип не должен спорить с бургером */
   .header__inner { gap: 16px; }
-  .logo { gap: 10px; }
-  .logo__mark { width: 30px; height: 30px; }
-  .logo__name { font-size: 19px; }
+  .logo { gap: 4px; }
+  .logo__lockup { height: 26px; }
+  .logo__lockup--footer { height: 34px; }
   .logo__tag { font-size: 8px; letter-spacing: .14em; }
 
   /* Первый экран */
@@ -1349,7 +1353,7 @@ button, input, textarea, select { font: inherit; color: inherit; }
 @media (max-width: 380px) {
   :root { --gutter: 16px; }
   .logo__tag { display: none; }
-  .logo__name { font-size: 18px; }
+  .logo__lockup { height: 26px; }
   .hero__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
   .stat__value { font-size: 22px; }
   .team { grid-template-columns: 1fr; }
