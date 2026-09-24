@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Кейсы — Креаметрика</title>
-<meta name="description" content="Кейсы агентства Креаметрика: рост выручки, снижение ДРР и чистка ассортимента на Wildberries и Ozon. С исходными цифрами и гипотезами.">
+<meta name="description" content="Разборы кабинетов на Wildberries и Ozon в обезличенном формате: ситуация, что проверяли, что меняли и по каким показателям оценивали эффект.">
 <meta name="theme-color" content="#F4F2EE">
 <link rel="canonical" href="https://nbalakk.github.io/kreametrika-site/cases.html">
 
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Креаметрика">
 <meta property="og:title" content="Кейсы — Креаметрика">
-<meta property="og:description" content="Каждый кейс — с исходными цифрами, гипотезами и тем, что не сработало.">
+<meta property="og:description" content="Разборы кабинетов на Wildberries и Ozon в обезличенном формате: ситуация, что проверяли, что меняли и по каким показателям оценивали эффект.">
 <meta property="og:url" content="https://nbalakk.github.io/kreametrika-site/cases.html">
 <meta property="og:image" content="https://nbalakk.github.io/kreametrika-site/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -26,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="assets/js/main.js" defer></script>
+<link rel="stylesheet" href="assets/css/style.css?v=20260924">
+<script src="assets/js/main.js?v=20260924" defer></script>
 </head>
 
 <body data-page="cases">
@@ -38,17 +38,18 @@
   <div class="wrap header__inner">
     <a class="logo" href="index.html" aria-label="Креаметрика — на главную">
       <img class="logo__lockup" src="assets/brand/lockup.svg" alt="Креаметрика" width="238" height="36">
-      <span class="logo__tag">агентство роста в e-commerce</span>
+      <span class="logo__tag">Wildberries · Ozon</span>
     </a>
 
     <nav class="nav" aria-label="Основная навигация">
+      <a href="index.html#funnel">Воронка</a>
       <a href="index.html#services" data-nav="services">Услуги</a>
+      <a href="index.html#process">Как работаем</a>
       <a href="cases.html" data-nav="cases">Кейсы</a>
-      <a href="index.html#pricing" data-nav="pricing">Тарифы</a>
-      <a href="contacts.html" data-nav="contacts">Контакты</a>
+      <a href="index.html#faq">FAQ</a>
     </nav>
 
-    <a class="btn btn--ink header__cta" href="contacts.html">Обсудить проект</a>
+    <a class="btn btn--ink header__cta" href="#lead">Разобрать кабинет</a>
 
     <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Меню">
       <span></span><span></span><span></span>
@@ -57,195 +58,136 @@
 </header>
 
 <div class="drawer" id="drawer">
+  <a href="index.html#funnel">Воронка</a>
   <a href="index.html#services">Услуги</a>
+  <a href="index.html#process">Как работаем</a>
   <a href="cases.html">Кейсы</a>
-  <a href="index.html#pricing">Тарифы</a>
-  <a href="contacts.html">Контакты</a>
-  <a class="drawer__cta" href="contacts.html">Обсудить проект</a>
+  <a href="index.html#faq">FAQ</a>
+  <a class="drawer__cta" href="#lead">Разобрать мой кабинет</a>
   <div class="drawer__foot">
-    HELLO@KREAMETRIKA.COM<br>
-    +7 495 000-00-00<br>
-    МОСКВА, Б. НОВОДМИТРОВСКАЯ 36
+    ОТВЕЧАЕМ В TELEGRAM И ПО ПОЧТЕ<br>
+    КОНТАКТЫ — В ПОДВАЛЕ САЙТА
   </div>
 </div>
-
 <main id="main">
 <div class="wrap page-head">
-  <p class="eyebrow">Кейсы · 2023—2026</p>
+  <p class="eyebrow">Кейсы</p>
   <h1 class="h1" data-reveal="fade">
-    <span class="line"><span>Контент</span></span>
-    <span class="line"><span class="accent">× метрики</span></span>
+    <span class="line"><span>Разборы</span></span>
+    <span class="line"><span class="accent">кабинетов</span></span>
   </h1>
-  <p class="lead lead--top">Каждый кейс — с исходными цифрами, гипотезами и тем, что не сработало. Считаем это честнее, чем витрина из одних успехов.</p>
+  <p class="lead lead--top">Каждый разбор — про то, где кабинет терял покупателей, что мы проверяли и что меняли. Публикуем обезличенно.</p>
 
-  <div class="filters" data-filters role="group" aria-label="Фильтр кейсов">
-    <button class="chip" type="button" data-filter="all" aria-pressed="true">Все</button>
-    <button class="chip" type="button" data-filter="wb" aria-pressed="false">Wildberries</button>
-    <button class="chip" type="button" data-filter="ozon" aria-pressed="false">Ozon</button>
-    <button class="chip" type="button" data-filter="analytics" aria-pressed="false">Аналитика</button>
-    <button class="chip" type="button" data-filter="audit" aria-pressed="false">Аудит</button>
-    <span class="mono filters__count" data-filter-count aria-live="polite">Показано: 6</span>
+  <div class="nda" data-reveal="up">
+    <p><strong>Почему без названий брендов.</strong> С клиентами подписано соглашение о конфиденциальности, поэтому мы не публикуем названия, скриншоты кабинетов и абсолютные обороты. Показываем категорию, суть задачи и состав работ.</p>
+    <p>Показатели по каждому разбору публикуем только после согласования с клиентом — в относительном виде и с оговоркой, что на результат влияли также цена, остатки и решения площадки.</p>
   </div>
 
   <div class="cards" data-stagger="100">
-
-    <a class="case case--wide" href="case-cosmetics.html" data-tags="wb">
-      <div class="case__media media-anim">
-        <img src="assets/img/case-wide.svg" alt="Кейс: косметика на Wildberries" width="1200" height="1000">
-        <span class="media__sq media__sq--corner-tr" aria-hidden="true"></span>
-      </div>
-      <div class="case__body">
-        <div>
-          <div class="mono mono--xs case__tag">Косметика · Wildberries · 2025</div>
-          <h2 class="case__title">Из 18 SKU в топ категории за 5 месяцев</h2>
-          <p>Пересобрали карточки и семантику, отказались от 40% ассортимента и переложили бюджет в высокомаржинальные позиции.</p>
+      <a class="case" href="case-sample.html" data-tags="wb">
+        <div class="case__body">
+          <div class="mono mono--xs case__tag">Уход и косметика · Wildberries</div>
+          <h3 class="case__title">Трафик на карточки есть, корзина пустая</h3>
+          <dl class="case__facts">
+            <div><dt>Ситуация</dt><dd>Показы и клики держались, а добавлений в корзину было мало.</dd></div>
+            <div><dt>Что проверяли</dt><dd>Первый экран карточки, инфографику, характеристики, вопросы из отзывов.</dd></div>
+            <div><dt>Что меняли</dt><dd>Пересобрали первый экран и вынесли характеристики в инфографику.</dd></div>
+          </dl>
+          <div class="case__soon">Показатели готовятся к публикации</div>
         </div>
-        <div class="case__kpis">
-          <div><div class="kpi__value kpi__value--accent">×4,1</div><div class="kpi__label">Выручка</div></div>
-          <div><div class="kpi__value">−38%</div><div class="kpi__label">ДРР</div></div>
-          <div><div class="kpi__value">+27 п.п.</div><div class="kpi__label">Конверсия</div></div>
-        </div>
-      </div>
-    </a>
+      </a>
 
-    <a class="case" href="case-cosmetics.html" data-tags="ozon">
-      <div class="case__media media-anim">
-        <img src="assets/img/case-2.svg" alt="Кейс: текстиль на Ozon" width="1200" height="900" loading="lazy">
-      </div>
-      <div class="case__body">
-        <div class="mono mono--xs case__tag">Текстиль · Ozon</div>
-        <h3 class="case__title">Перезапуск линейки и выход в новую нишу</h3>
-        <div class="case__kpis">
-          <div><div class="kpi__value kpi__value--accent">+178%</div><div class="kpi__label">Выручка</div></div>
-          <div><div class="kpi__value">+22 п.п.</div><div class="kpi__label">Маржа</div></div>
+      <a class="case" href="case-sample.html" data-tags="ozon analytics">
+        <div class="case__body">
+          <div class="mono mono--xs case__tag">Бытовая химия · Ozon</div>
+          <h3 class="case__title">Линейка разрослась, карточки конкурируют между собой</h3>
+          <dl class="case__facts">
+            <div><dt>Ситуация</dt><dd>Позиции одной линейки перебивали друг друга в выдаче по одним запросам.</dd></div>
+            <div><dt>Что проверяли</dt><dd>Семантику по каждой карточке, пересечения кластеров, структуру линейки.</dd></div>
+            <div><dt>Что меняли</dt><dd>Развели запросы между карточками и перестроили заголовки.</dd></div>
+          </dl>
+          <div class="case__soon">Показатели готовятся к публикации</div>
         </div>
-      </div>
-    </a>
+      </a>
 
-    <a class="case" href="case-cosmetics.html" data-tags="wb ozon analytics">
-      <div class="case__media media-anim">
-        <img src="assets/img/case-3.svg" alt="Кейс: электроника на Wildberries и Ozon" width="1200" height="900" loading="lazy">
-      </div>
-      <div class="case__body">
-        <div class="mono mono--xs case__tag">Электроника · WB + Ozon</div>
-        <h3 class="case__title">Сквозная аналитика на 900 SKU</h3>
-        <div class="case__kpis">
-          <div><div class="kpi__value kpi__value--accent">+64%</div><div class="kpi__label">Прибыль</div></div>
-          <div><div class="kpi__value">−2,1×</div><div class="kpi__label">Остатки</div></div>
+      <a class="case" href="case-sample.html" data-tags="wb ozon audit">
+        <div class="case__body">
+          <div class="mono mono--xs case__tag">Товары для дома · WB + Ozon</div>
+          <h3 class="case__title">Реклама росла быстрее заказов</h3>
+          <dl class="case__facts">
+            <div><dt>Ситуация</dt><dd>Расходы на внутреннюю рекламу увеличивались, заказы — нет.</dd></div>
+            <div><dt>Что проверяли</dt><dd>Структуру кампаний, ставки, связку рекламы с воронкой карточки.</dd></div>
+            <div><dt>Что меняли</dt><dd>Пересобрали структуру кампаний и отключили неокупаемые связки.</dd></div>
+          </dl>
+          <div class="case__soon">Показатели готовятся к публикации</div>
         </div>
-      </div>
-    </a>
-
-    <a class="case" href="case-cosmetics.html" data-tags="wb analytics">
-      <div class="case__media media-anim">
-        <img src="assets/img/case-4.svg" alt="Кейс: бытовая химия на Wildberries" width="1200" height="900" loading="lazy">
-      </div>
-      <div class="case__body">
-        <div class="mono mono--xs case__tag">Бытовая химия · Wildberries</div>
-        <h3 class="case__title">Чистка ассортимента с 400 до 160 карточек</h3>
-        <div class="case__kpis">
-          <div><div class="kpi__value kpi__value--accent">+41%</div><div class="kpi__label">Прибыль</div></div>
-          <div><div class="kpi__value">−52%</div><div class="kpi__label">SKU</div></div>
-        </div>
-      </div>
-    </a>
-
-    <a class="case" href="case-cosmetics.html" data-tags="ozon">
-      <div class="case__media media-anim">
-        <img src="assets/img/case-5.svg" alt="Кейс: спорт на Ozon" width="1200" height="900" loading="lazy">
-      </div>
-      <div class="case__body">
-        <div class="mono mono--xs case__tag">Спорт · Ozon</div>
-        <h3 class="case__title">Сезонный запуск с нуля за 8 недель</h3>
-        <div class="case__kpis">
-          <div><div class="kpi__value kpi__value--accent">38 млн ₽</div><div class="kpi__label">За сезон</div></div>
-          <div><div class="kpi__value">8,4%</div><div class="kpi__label">ДРР</div></div>
-        </div>
-      </div>
-    </a>
-
-    <a class="case" href="case-cosmetics.html" data-tags="audit">
-      <div class="case__media media-anim">
-        <img src="assets/img/case-6.svg" alt="Кейс: аудит кабинета в детских товарах" width="1200" height="900" loading="lazy">
-      </div>
-      <div class="case__body">
-        <div class="mono mono--xs case__tag">Детские товары · Аудит</div>
-        <h3 class="case__title">Аудит, который вернул 6 млн ₽ маржи</h3>
-        <div class="case__kpis">
-          <div><div class="kpi__value kpi__value--accent">6 млн ₽</div><div class="kpi__label">Маржа</div></div>
-          <div><div class="kpi__value">14 дней</div><div class="kpi__label">Срок</div></div>
-        </div>
-      </div>
-    </a>
-
+      </a>
   </div>
 
-  <p class="cases-empty" data-filter-empty hidden>В этой категории пока нет опубликованных кейсов. Напишите нам — расскажем о похожих проектах под NDA.</p>
+  <p class="cases-empty" data-filter-empty hidden>В этой категории пока нет опубликованных разборов.</p>
 </div>
 
-  <section class="form-band" data-reveal="fade">
-    <div class="wrap form-layout">
-      <div>
-        <p class="eyebrow eyebrow--light">Заявка</p>
-        <h2 class="h2 h2--lead">Хотите такой же <span class="accent">результат</span>?</h2>
-        <p class="lead lead--light lead--narrow">Пришлите ссылку на кабинет или пару карточек — вернёмся с оценкой потенциала роста.</p>
-        <div class="contact-list">
-          <div><a href="mailto:hello@kreametrika.com">hello@kreametrika.com</a></div>
-          <div><a href="tel:+74950000000">+7 495 000-00-00</a></div>
-        </div>
-      </div>
-
-      <form class="form" data-form="cases" novalidate>
-        <div class="field">
-          <label for="c-name">Имя</label>
-          <input id="c-name" name="name" type="text" placeholder="Как к вам обращаться" required autocomplete="name">
-          <div class="field__error">Заполните поле</div>
-        </div>
-        <div class="field">
-          <label for="c-contact">Контакт</label>
-          <input id="c-contact" name="contact" type="text" placeholder="Телефон или e-mail" required data-validate="contact" autocomplete="email">
-          <div class="field__error">Нужен телефон или e-mail</div>
-        </div>
-        <div class="field">
-          <label for="c-task">Задача</label>
-          <textarea id="c-task" name="task" rows="3" placeholder="Категория, площадка, текущие объёмы"></textarea>
-        </div>
-        <button class="btn btn--light" type="submit">Отправить заявку</button>
-        <div class="form__status">Заявка отправлена. Свяжемся с вами в течение рабочего дня.</div>
-        <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой обработки персональных данных</a>.</p>
-      </form>
+<section class="form-band" id="lead" data-reveal="fade">
+  <div class="wrap form-layout">
+    <div>
+      <p class="eyebrow eyebrow--light">Заявка</p>
+      <h2 class="h2 h2--lead">Разберём ваш <span class="accent">кабинет</span></h2>
+      <p class="lead lead--light lead--narrow">Расскажите, что происходит с продажами. Вернёмся с тем, какие участки воронки стоит проверить первыми.</p>
     </div>
-  </section>
+
+    <form class="form" data-form="cases" novalidate>
+      <div class="field">
+        <label for="c-name">Имя</label>
+        <input id="c-name" name="name" type="text" placeholder="Как к вам обращаться" required autocomplete="name">
+        <div class="field__error">Заполните поле</div>
+      </div>
+      <div class="field">
+        <label for="c-contact">Контакт</label>
+        <input id="c-contact" name="contact" type="text" placeholder="Телефон, e-mail или Telegram" required data-validate="contact" autocomplete="email">
+        <div class="field__error">Нужен телефон, e-mail или Telegram</div>
+      </div>
+      <div class="field">
+        <label for="c-task">Задача</label>
+        <textarea id="c-task" name="task" rows="3" placeholder="Категория, площадка, что происходит с продажами"></textarea>
+      </div>
+      <button class="btn btn--light" type="submit">Отправить заявку</button>
+      <div class="form__status">Заявка отправлена. Свяжемся с вами и зададим несколько уточняющих вопросов.</div>
+      <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой обработки персональных данных</a>.</p>
+    </form>
+  </div>
+</section>
 </main>
 
 <footer class="footer">
   <div class="wrap footer__grid">
     <div>
       <img class="logo__lockup logo__lockup--footer" src="assets/brand/lockup.svg" alt="Креаметрика" width="265" height="40">
-      <div class="logo__tag">агентство роста в e-commerce</div>
+      <div class="logo__tag">Wildberries · Ozon</div>
       <div class="footer__bars" aria-hidden="true"><span></span><span></span><span></span></div>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Услуги</div>
-      <a href="index.html#services">Ведение Wildberries</a>
-      <a href="index.html#services">Ведение Ozon</a>
-      <a href="index.html#services">Аналитика и BI</a>
-      <a href="index.html#services">Аудит кабинета</a>
+      <a href="service-diagnostika.html">Диагностика воронки</a>
+      <a href="service-kartochki-seo.html">Карточки и SEO</a>
+      <a href="service-reklama.html">Реклама</a>
+      <a href="service-kontent.html">Контент бренда</a>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Агентство</div>
+      <a href="index.html#process">Как работаем</a>
+      <a href="index.html#report">Образец отчёта</a>
       <a href="cases.html">Кейсы</a>
-      <a href="index.html#pricing">Тарифы</a>
-      <a href="contacts.html">Контакты</a>
+      <a href="index.html#faq">Вопросы и ответы</a>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Контакты</div>
-      <a href="mailto:hello@kreametrika.com">hello@kreametrika.com</a>
-      <a href="tel:+74950000000">+7 495 000-00-00</a>
-      <span class="muted">Москва, Б. Новодмитровская 36</span>
+      <!-- Заменить на реальные контакты агентства -->
+      <span class="pending">[Почта — от заказчика]</span>
+      <span class="pending">[Telegram — от заказчика]</span>
+      <a class="link-mono" href="index.html#lead">Оставить заявку →</a>
     </div>
   </div>
 
@@ -256,6 +198,5 @@
     </div>
   </div>
 </footer>
-
 </body>
 </html>

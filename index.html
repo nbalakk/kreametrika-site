@@ -11,8 +11,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Креаметрика">
-<meta property="og:title" content="Креаметрика — агентство роста в e-commerce">
-<meta property="og:description" content="Рост на маркетплейсах без догадок: аудит, контент, реклама и аналитика для селлеров Wildberries и Ozon.">
+<meta property="og:title" content="Находим, где карточки теряют покупателей">
+<meta property="og:description" content="Разбираем путь покупателя от показа до заказа на Wildberries и Ozon. Фиксируем показатели до изменений и проверяем эффект по данным.">
 <meta property="og:url" content="https://nbalakk.github.io/kreametrika-site/">
 <meta property="og:image" content="https://nbalakk.github.io/kreametrika-site/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -26,26 +26,30 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="assets/js/main.js" defer></script>
-<script src="assets/js/km-demo.js" defer></script>
+<link rel="stylesheet" href="assets/css/style.css?v=20260924">
+<script src="assets/js/main.js?v=20260924" defer></script>
+<script src="assets/js/km-demo.js?v=20260924" defer></script>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Креаметрика",
-  "description": "Агентство роста в e-commerce: ведение Wildberries и Ozon, аналитика, аудит кабинета.",
+  "description": "Агентство продвижения на маркетплейсах: разбор воронки, оптимизация карточек и SEO, аудит рекламы, контент бренда.",
   "url": "https://nbalakk.github.io/kreametrika-site/",
   "logo": "https://nbalakk.github.io/kreametrika-site/assets/brand/badge.svg",
-  "email": "hello@kreametrika.com",
-  "telephone": "+7 495 000-00-00",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Большая Новодмитровская, 36, стр. 2",
-    "addressLocality": "Москва",
-    "addressCountry": "RU"
-  }
+  "areaServed": "RU"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "С какого объёма есть смысл работать?", "acceptedAnswer": { "@type": "Answer", "text": "Порога нет: смотрим на задачу и объём работ. Точечные задачи берём от определённого объёма — обсудим на созвоне." } },
+    { "@type": "Question", "name": "Вы гарантируете рост продаж?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. На продажи влияют цена, остатки, ассортимент и решения площадки. Мы отвечаем за работы и за проверку их эффекта." } },
+    { "@type": "Question", "name": "Как вы показываете результат?", "acceptedAnswer": { "@type": "Answer", "text": "Фиксируем показатели до изменений и сравниваем после, отделяя эффект работ от цены, остатков и условий площадки." } }
+  ]
 }
 </script>
 </head>
@@ -58,17 +62,18 @@
   <div class="wrap header__inner">
     <a class="logo" href="index.html" aria-label="Креаметрика — на главную">
       <img class="logo__lockup" src="assets/brand/lockup.svg" alt="Креаметрика" width="238" height="36">
-      <span class="logo__tag">агентство роста в e-commerce</span>
+      <span class="logo__tag">Wildberries · Ozon</span>
     </a>
 
     <nav class="nav" aria-label="Основная навигация">
-      <a href="index.html#services" data-nav="services">Услуги</a>
+      <a href="#funnel">Воронка</a>
+      <a href="#services" data-nav="services">Услуги</a>
+      <a href="#process">Как работаем</a>
       <a href="cases.html" data-nav="cases">Кейсы</a>
-      <a href="index.html#pricing" data-nav="pricing">Тарифы</a>
-      <a href="contacts.html" data-nav="contacts">Контакты</a>
+      <a href="#faq">FAQ</a>
     </nav>
 
-    <a class="btn btn--ink header__cta" href="#lead">Обсудить проект</a>
+    <a class="btn btn--ink header__cta" href="#lead">Разобрать кабинет</a>
 
     <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Меню">
       <span></span><span></span><span></span>
@@ -77,15 +82,15 @@
 </header>
 
 <div class="drawer" id="drawer">
-  <a href="index.html#services">Услуги</a>
+  <a href="#funnel">Воронка</a>
+  <a href="#services">Услуги</a>
+  <a href="#process">Как работаем</a>
   <a href="cases.html">Кейсы</a>
-  <a href="index.html#pricing">Тарифы</a>
-  <a href="contacts.html">Контакты</a>
-  <a class="drawer__cta" href="index.html#lead">Обсудить проект</a>
+  <a href="#faq">FAQ</a>
+  <a class="drawer__cta" href="#lead">Разобрать мой кабинет</a>
   <div class="drawer__foot">
-    HELLO@KREAMETRIKA.COM<br>
-    +7 495 000-00-00<br>
-    МОСКВА, Б. НОВОДМИТРОВСКАЯ 36
+    ОТВЕЧАЕМ В TELEGRAM И ПО ПОЧТЕ<br>
+    КОНТАКТЫ — В ПОДВАЛЕ САЙТА
   </div>
 </div>
 
@@ -121,338 +126,399 @@
   <!-- --------------------------------------------------------- Бегущая -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee__track">
-      <span>АУДИТ КАБИНЕТА</span><span class="x">×</span>
-      <span>КОНТЕНТ КАРТОЧЕК</span><span class="x">×</span>
-      <span>ВНУТРЕННЯЯ РЕКЛАМА</span><span class="x">×</span>
-      <span>UNIT-ЭКОНОМИКА</span><span class="x">×</span>
-      <span>BI-АНАЛИТИКА</span><span class="x">×</span>
-      <span>АУДИТ КАБИНЕТА</span><span class="x">×</span>
-      <span>КОНТЕНТ КАРТОЧЕК</span><span class="x">×</span>
-      <span>ВНУТРЕННЯЯ РЕКЛАМА</span><span class="x">×</span>
-      <span>UNIT-ЭКОНОМИКА</span><span class="x">×</span>
-      <span>BI-АНАЛИТИКА</span><span class="x">×</span>
+      <span>ДИАГНОСТИКА ВОРОНКИ</span><span class="x">×</span>
+      <span>КАРТОЧКИ И SEO</span><span class="x">×</span>
+      <span>АУДИТ РЕКЛАМЫ</span><span class="x">×</span>
+      <span>КОНТЕНТ БРЕНДА</span><span class="x">×</span>
+      <span>ПОКАЗАТЕЛИ ДО И ПОСЛЕ</span><span class="x">×</span>
+      <span>ДИАГНОСТИКА ВОРОНКИ</span><span class="x">×</span>
+      <span>КАРТОЧКИ И SEO</span><span class="x">×</span>
+      <span>АУДИТ РЕКЛАМЫ</span><span class="x">×</span>
+      <span>КОНТЕНТ БРЕНДА</span><span class="x">×</span>
+      <span>ПОКАЗАТЕЛИ ДО И ПОСЛЕ</span><span class="x">×</span>
     </div>
   </div>
 
+  <!-- ------------------------------------------------------ Воронка потерь -->
+  <section class="band band--funnel" id="funnel">
+    <div class="wrap">
+      <div class="section-head" data-reveal="up">
+        <div>
+          <p class="eyebrow eyebrow--light">01 — Воронка потерь</p>
+          <h2 class="h2">Путь покупателя<br>от показа <span class="accent">до заказа</span></h2>
+        </div>
+        <p class="section-head__note">Покупатель может уйти на любой ступени. Мы проверяем каждую и честно отделяем то, на что влияем, от решений бренда и площадки.</p>
+      </div>
+
+      <div class="funnel" data-reveal="fade">
+        <div class="funnel__steps" role="tablist" aria-label="Ступени воронки">
+          <button class="fstep" type="button" role="tab" aria-selected="false" aria-controls="fp-1" id="ft-1" data-step="1">
+            <span class="fstep__bar" style="--w:100%"></span>
+            <span class="fstep__label">01 · Показ</span>
+          </button>
+          <button class="fstep" type="button" role="tab" aria-selected="false" aria-controls="fp-2" id="ft-2" data-step="2">
+            <span class="fstep__bar" style="--w:86%"></span>
+            <span class="fstep__label">02 · Клик</span>
+          </button>
+          <button class="fstep is-hot" type="button" role="tab" aria-selected="true" aria-controls="fp-3" id="ft-3" data-step="3">
+            <span class="fstep__bar" style="--w:72%"></span>
+            <span class="fstep__label">03 · Карточка</span>
+          </button>
+          <button class="fstep fstep--client" type="button" role="tab" aria-selected="false" aria-controls="fp-4" id="ft-4" data-step="4">
+            <span class="fstep__bar" style="--w:58%"></span>
+            <span class="fstep__label">04 · Корзина</span>
+          </button>
+          <button class="fstep fstep--client" type="button" role="tab" aria-selected="false" aria-controls="fp-5" id="ft-5" data-step="5">
+            <span class="fstep__bar" style="--w:46%"></span>
+            <span class="fstep__label">05 · Заказ</span>
+          </button>
+          <p class="funnel__legend">Пунктир — цена, остатки и решения площадки: зона клиента</p>
+        </div>
+
+        <div class="funnel__panels">
+          <div class="fpanel" role="tabpanel" id="fp-1" aria-labelledby="ft-1" hidden>
+            <div class="fpanel__row"><span class="mono mono--xs">Что проверяем</span><p>Поисковая видимость, охват по кластерам запросов</p></div>
+            <div class="fpanel__row"><span class="mono mono--xs">Типичные причины потерь</span><p>Карточка не попадает в релевантную выдачу</p></div>
+            <div class="fpanel__zone"><span class="zone zone--us">Зона агентства</span>семантика, SEO, внутренняя реклама</div>
+          </div>
+          <div class="fpanel" role="tabpanel" id="fp-2" aria-labelledby="ft-2" hidden>
+            <div class="fpanel__row"><span class="mono mono--xs">Что проверяем</span><p>Главное изображение, цена в выдаче, рейтинг</p></div>
+            <div class="fpanel__row"><span class="mono mono--xs">Типичные причины потерь</span><p>Обложка не отвечает на запрос, цена вне рынка</p></div>
+            <div class="fpanel__zone"><span class="zone zone--us">Зона агентства</span>обложка. Цена — решение бренда, мы показываем её влияние</div>
+          </div>
+          <div class="fpanel" role="tabpanel" id="fp-3" aria-labelledby="ft-3">
+            <div class="fpanel__row"><span class="mono mono--xs">Что проверяем</span><p>Содержание, инфографику, характеристики, отзывы</p></div>
+            <div class="fpanel__row"><span class="mono mono--xs">Типичные причины потерь</span><p>Не закрыты возражения, слабый первый экран</p></div>
+            <div class="fpanel__zone"><span class="zone zone--us">Зона агентства</span>контент, структура и визуал карточки</div>
+          </div>
+          <div class="fpanel" role="tabpanel" id="fp-4" aria-labelledby="ft-4" hidden>
+            <div class="fpanel__row"><span class="mono mono--xs">Что проверяем</span><p>Наличие, условия доставки, цена</p></div>
+            <div class="fpanel__row"><span class="mono mono--xs">Типичные причины потерь</span><p>Нет остатков по размерам, невыгодные условия</p></div>
+            <div class="fpanel__zone"><span class="zone zone--client">Зона клиента</span>наличие и цена. Мы фиксируем их влияние, но не приписываем себе</div>
+          </div>
+          <div class="fpanel" role="tabpanel" id="fp-5" aria-labelledby="ft-5" hidden>
+            <div class="fpanel__row"><span class="mono mono--xs">Что проверяем</span><p>Итоговую конверсию в заказ</p></div>
+            <div class="fpanel__row"><span class="mono mono--xs">Типичные причины потерь</span><p>Ассортимент и цена вне работы агентства</p></div>
+            <div class="fpanel__zone"><span class="zone zone--client">Зона клиента и площадки</span>оцениваем, но результат не присваиваем</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ------------------------------------------------------------ Услуги -->
-  <section class="wrap section" data-reveal="up" id="services">
+  <section class="wrap section" id="services">
     <div class="section-head" data-reveal="up">
       <div>
-        <p class="eyebrow">01 — Услуги</p>
-        <h2 class="h2">Что мы <span class="accent">делаем</span></h2>
+        <p class="eyebrow">02 — Услуги</p>
+        <h2 class="h2">Услуги по <span class="accent">задачам</span></h2>
       </div>
-      <p>Четыре направления, которые закрывают полный цикл работы селлера на маркетплейсе — от диагностики до масштабирования.</p>
+      <p class="section-head__note">Начинаем с диагностики — она показывает, какая из остальных задач важнее для вашего кабинета сейчас.</p>
     </div>
 
     <div class="grid-hair" data-stagger="90">
-      <article class="service">
-        <div class="service__num">01</div>
-        <h3 class="service__title">Ведение Wildberries</h3>
-        <p>Полное управление кабинетом: карточки, поставки, цены, акции, внутренняя реклама.</p>
+      <a class="service service--entry" href="service-diagnostika.html">
+        <div class="service__num">01 · Входной продукт</div>
+        <h3 class="service__title">Диагностика воронки</h3>
+        <p>Анализ данных и план приоритетных действий.</p>
         <ul class="service__list">
-          <li>SEO-карточек</li>
-          <li>Ставки и ДРР</li>
-          <li>Работа с отзывами</li>
+          <li>Разбор пути от показа до заказа</li>
+          <li>Поиск участков потерь и их причин</li>
+          <li>Список действий с приоритетами</li>
         </ul>
-      </article>
+        <span class="service__more">Подробнее →</span>
+      </a>
 
-      <article class="service">
+      <a class="service" href="service-kartochki-seo.html">
         <div class="service__num">02</div>
-        <h3 class="service__title">Ведение Ozon</h3>
-        <p>Категорийная стратегия, продвижение в поиске, трафареты и контроль индекса цен.</p>
+        <h3 class="service__title">Карточки и SEO</h3>
+        <p>Содержание карточки, поисковая видимость, ТЗ на визуалы и проверка изменений.</p>
         <ul class="service__list">
-          <li>Трафареты и Брендшелф</li>
-          <li>Индекс цен</li>
-          <li>Логистические схемы</li>
+          <li>SEO-оптимизация</li>
+          <li>Полная оптимизация карточки</li>
+          <li>Оптимизация товарной линейки</li>
         </ul>
-      </article>
+        <span class="service__more">Подробнее →</span>
+      </a>
 
-      <article class="service">
+      <a class="service" href="service-reklama.html">
         <div class="service__num">03</div>
-        <h3 class="service__title">Аналитика и BI</h3>
-        <p>Сквозной дашборд по выручке, марже и рекламе. Данные вместо отчётов «на словах».</p>
+        <h3 class="service__title">Реклама</h3>
+        <p>Аудит рекламных кампаний и внутренняя реклама Wildberries и Ozon.</p>
         <ul class="service__list">
-          <li>Unit-экономика SKU</li>
-          <li>Прогноз поставок</li>
-          <li>Еженедельный отчёт</li>
+          <li>Разбор структуры кампаний</li>
+          <li>Анализ ставок и расходов</li>
+          <li>Что стоит пересмотреть</li>
         </ul>
-      </article>
+        <span class="service__more">Подробнее →</span>
+      </a>
 
-      <article class="service service--dark">
+      <a class="service service--dark" href="service-kontent.html">
         <div class="service__num">04</div>
-        <h3 class="service__title">Аудит кабинета</h3>
-        <p>14 дней, 60+ параметров и план роста с приоритетами. Точка входа в работу.</p>
+        <h3 class="service__title">Контент бренда</h3>
+        <p>Контент-стратегия и система визуала на маркетплейсах.</p>
         <ul class="service__list">
-          <li>Разбор ассортимента</li>
-          <li>Аудит рекламы</li>
-          <li>Дорожная карта</li>
+          <li>Дизайн карточек и инфографика</li>
+          <li>Rich-контент</li>
+          <li>Система контента бренда</li>
         </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- --------------------------------------------------------- Результаты -->
-  <section class="band" data-reveal="fade" id="results">
-    <div class="wrap">
-      <p class="eyebrow eyebrow--light">02 — Результаты</p>
-      <h2 class="h2 section-title--lg">Цифры за <span class="accent">2025 год</span></h2>
-
-      <div class="figures" data-stagger="90">
-        <div class="figure figure--accent">
-          <div class="figure__value" data-count>+312%</div>
-          <div class="figure__label">Органический трафик</div>
-        </div>
-        <div class="figure">
-          <div class="figure__value" data-count>+178%</div>
-          <div class="figure__label">Рост выручки</div>
-        </div>
-        <div class="figure">
-          <div class="figure__value" data-count>−41%</div>
-          <div class="figure__label">ДРР в среднем</div>
-        </div>
-        <div class="figure">
-          <div class="figure__value" data-count>94%</div>
-          <div class="figure__label">Клиентов продлевают</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ------------------------------------------------------------- Кейсы -->
-  <section class="wrap section" data-reveal="up" id="cases">
-    <div class="section-head" data-reveal="up">
-      <div>
-        <p class="eyebrow">03 — Кейсы</p>
-        <h2 class="h2">Контент <span class="accent">× метрики</span></h2>
-      </div>
-      <a class="link-mono" href="cases.html">Все кейсы →</a>
-    </div>
-
-    <div class="cards" data-stagger="100">
-      <a class="case" href="case-cosmetics.html">
-        <div class="case__media media-anim">
-          <img src="assets/img/case-1.svg" alt="Кейс: косметика на Wildberries" width="1200" height="900" loading="lazy">
-          <span class="media__sq media__sq--corner-br" aria-hidden="true"></span>
-        </div>
-        <div class="case__body">
-          <div class="mono mono--xs case__tag">Косметика · Wildberries</div>
-          <h3 class="case__title">Из 18 SKU в топ категории за 5 месяцев</h3>
-          <div class="case__kpis">
-            <div><div class="kpi__value kpi__value--accent">×4,1</div><div class="kpi__label">Выручка</div></div>
-            <div><div class="kpi__value">−38%</div><div class="kpi__label">ДРР</div></div>
-          </div>
-        </div>
-      </a>
-
-      <a class="case" href="case-cosmetics.html">
-        <div class="case__media media-anim">
-          <img src="assets/img/case-2.svg" alt="Кейс: текстиль на Ozon" width="1200" height="900" loading="lazy">
-          <span class="media__sq media__sq--corner-br" aria-hidden="true"></span>
-        </div>
-        <div class="case__body">
-          <div class="mono mono--xs case__tag">Текстиль · Ozon</div>
-          <h3 class="case__title">Перезапуск линейки и выход в новую нишу</h3>
-          <div class="case__kpis">
-            <div><div class="kpi__value kpi__value--accent">+178%</div><div class="kpi__label">Выручка</div></div>
-            <div><div class="kpi__value">+22 п.п.</div><div class="kpi__label">Маржа</div></div>
-          </div>
-        </div>
-      </a>
-
-      <a class="case" href="case-cosmetics.html">
-        <div class="case__media media-anim">
-          <img src="assets/img/case-3.svg" alt="Кейс: электроника на Wildberries и Ozon" width="1200" height="900" loading="lazy">
-          <span class="media__sq media__sq--corner-br" aria-hidden="true"></span>
-        </div>
-        <div class="case__body">
-          <div class="mono mono--xs case__tag">Электроника · WB + Ozon</div>
-          <h3 class="case__title">Сквозная аналитика на 900 SKU</h3>
-          <div class="case__kpis">
-            <div><div class="kpi__value kpi__value--accent">+64%</div><div class="kpi__label">Прибыль</div></div>
-            <div><div class="kpi__value">−2,1×</div><div class="kpi__label">Остатки</div></div>
-          </div>
-        </div>
+        <span class="service__more">Подробнее →</span>
       </a>
     </div>
   </section>
 
-  <!-- ----------------------------------------------------------- Процесс -->
-  <section class="wrap section" data-reveal="up" id="process">
-    <p class="eyebrow">04 — Процесс</p>
-    <h2 class="h2 section-title">Как устроена <span class="accent">работа</span></h2>
+  <!-- ------------------------------------------------------- Как работаем -->
+  <section class="wrap section" id="process">
+    <p class="eyebrow" data-reveal="up">03 — Как работаем</p>
+    <h2 class="h2 section-title" data-reveal="up">Сначала данные,<br>потом <span class="accent">изменения</span></h2>
 
     <div class="steps" data-stagger="80">
       <div class="step step--first">
         <div class="step__num">01</div>
-        <h3>Аудит</h3>
-        <p>14 дней: разбираем кабинет, ассортимент, рекламу и экономику каждого SKU.</p>
+        <h3>Данные</h3>
+        <p>Получаем доступ к кабинету и ретро-данные по товарам, рекламе, продажам и остаткам.</p>
       </div>
       <div class="step">
         <div class="step__num">02</div>
-        <h3>Стратегия</h3>
-        <p>Согласуем цели по выручке и ДРР, собираем дорожную карту на квартал.</p>
+        <h3>Диагностика</h3>
+        <p>Находим участки потерь, проверяем причины и фиксируем показатели «до».</p>
+        <span class="step__flag">Фиксируем «до»</span>
       </div>
       <div class="step">
         <div class="step__num">03</div>
-        <h3>Запуск</h3>
-        <p>Контент, семантика, ставки, поставки. Первые изменения — в первые две недели.</p>
+        <h3>Изменения</h3>
+        <p>Согласуем и вносим правки в рекламу, SEO и карточки. Каждое изменение отвечает на конкретную задачу.</p>
       </div>
       <div class="step">
         <div class="step__num">04</div>
-        <h3>Масштаб</h3>
-        <p>Еженедельный цикл гипотез: тест → замер → закрепление того, что даёт прибыль.</p>
+        <h3>Проверка</h3>
+        <p>Сравниваем показатели и оставляем то, что подтвердилось данными, — отдельно от влияния цены, остатков и условий площадки.</p>
+        <span class="step__flag">Сравниваем «после»</span>
       </div>
     </div>
   </section>
 
-  <!-- ------------------------------------------------------------ Тарифы -->
-  <section class="wrap section" data-reveal="up" id="pricing">
-    <p class="eyebrow">05 — Тарифы</p>
-    <h2 class="h2 section-title">Форматы <span class="accent">сотрудничества</span></h2>
+  <!-- --------------------------------------------------- Что вы получаете -->
+  <section class="wrap section" id="report">
+    <div class="section-head" data-reveal="up">
+      <div>
+        <p class="eyebrow">04 — Что вы получаете</p>
+        <h2 class="h2">Отчёт, а не <span class="accent">презентация</span></h2>
+      </div>
+      <p class="section-head__note">Итог аудита — документ, с которым можно работать: где теряются покупатели, почему и что делать в каком порядке. Ниже — обезличенный образец.</p>
+    </div>
 
-    <div class="plans" data-stagger="100">
-      <article class="plan">
-        <div class="mono mono--xs">Разово</div>
-        <h3>Аудит</h3>
-        <div class="plan__price">от 90 000 ₽</div>
-        <ul class="plan__list">
-          <li>60+ параметров кабинета</li>
-          <li>Unit-экономика по SKU</li>
-          <li>План роста на квартал</li>
-          <li>Встреча-разбор 90 минут</li>
-        </ul>
-        <a class="btn btn--outline btn--block" href="#lead">Заказать аудит</a>
-      </article>
+    <div class="report" data-stagger="110">
+      <figure class="sheet">
+        <div class="sheet__paper">
+          <div class="sheet__top"><span>Креаметрика</span><span>Образец</span></div>
+          <div class="sheet__title">Аудит воронки</div>
+          <div class="sheet__brand">Бренд · категория</div>
+          <div class="sheet__label">Состав проверки</div>
+          <ul class="sheet__list">
+            <li>Поисковая видимость</li>
+            <li>Обложки и выдача</li>
+            <li>Содержание карточек</li>
+            <li>Рекламные кампании</li>
+            <li>Наличие и цена</li>
+          </ul>
+        </div>
+        <figcaption><span class="sheet__n">01</span>Титул. Что проверяли, по каким товарам и за какой период.</figcaption>
+      </figure>
 
-      <article class="plan plan--dark">
-        <span class="plan__flag" aria-hidden="true"></span>
-        <div class="mono mono--xs">Ежемесячно</div>
-        <h3>Ведение</h3>
-        <div class="plan__price">от 180 000 ₽</div>
-        <ul class="plan__list">
-          <li>Команда: менеджер, аналитик, дизайнер</li>
-          <li>Контент и реклама под ключ</li>
-          <li>BI-дашборд и недельные отчёты</li>
-          <li>SLA на правки — 24 часа</li>
-        </ul>
-        <a class="btn btn--light btn--block" href="#lead">Обсудить проект</a>
-      </article>
+      <figure class="sheet">
+        <div class="sheet__paper">
+          <div class="sheet__top"><span>Раздел 2 · Воронка</span></div>
+          <div class="sheet__title sheet__title--sm">Где теряются покупатели</div>
+          <div class="sheet__bars">
+            <span style="--w:100%"><i>Показ</i></span>
+            <span style="--w:86%"><i>Клик</i></span>
+            <span class="hot" style="--w:70%"><i>Карточка</i></span>
+            <span style="--w:56%"><i>Корзина</i></span>
+            <span style="--w:44%"><i>Заказ</i></span>
+          </div>
+          <div class="sheet__label">Вывод</div>
+          <p class="sheet__text">Основная потеря — между карточкой и корзиной. Причины разобраны по каждой ступени.</p>
+        </div>
+        <figcaption><span class="sheet__n">02</span>Воронка. Разметка ступеней и причины потерь по каждой.</figcaption>
+      </figure>
 
-      <article class="plan">
-        <div class="mono mono--xs">От результата</div>
-        <h3>Партнёрство</h3>
-        <div class="plan__price">% от роста</div>
-        <ul class="plan__list">
-          <li>Фикс + процент от прироста</li>
-          <li>Совместное планирование закупок</li>
-          <li>Доступ к команде без лимита часов</li>
-          <li>От 6 месяцев работы</li>
-        </ul>
-        <a class="btn btn--outline btn--block" href="#lead">Узнать условия</a>
-      </article>
+      <figure class="sheet">
+        <div class="sheet__paper">
+          <div class="sheet__top"><span>Раздел 5 · Приоритеты</span></div>
+          <div class="sheet__title sheet__title--sm">План действий</div>
+          <table class="sheet__table">
+            <thead><tr><th>#</th><th>Действие</th><th>Показатель</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Первый экран карточки</td><td>В корзину</td></tr>
+              <tr><td>2</td><td>Обложка в выдаче</td><td>CTR</td></tr>
+              <tr><td>3</td><td>Структура кампаний</td><td>ДРР</td></tr>
+              <tr><td>4</td><td class="dim">···</td><td class="dim">···</td></tr>
+            </tbody>
+          </table>
+          <div class="sheet__stamp">Образец · данные условные</div>
+        </div>
+        <figcaption><span class="sheet__n">03</span>Приоритеты. Что делать первым и по какому показателю проверяем эффект.</figcaption>
+      </figure>
+    </div>
+
+    <div class="metrics" data-reveal="up">
+      <span class="mono mono--xs">Анализируемые показатели</span>
+      <ul>
+        <li>CTR</li>
+        <li>Конверсия в корзину</li>
+        <li>Конверсия в заказ</li>
+        <li>Поисковая видимость</li>
+        <li>Доля рекламных расходов</li>
+      </ul>
     </div>
   </section>
 
-  <!-- ------------------------------------------------------------ Отзывы -->
-  <section class="wrap section" data-reveal="up" id="reviews">
-    <p class="eyebrow">06 — Отзывы</p>
-    <h2 class="h2 section-title">Что говорят <span class="accent">клиенты</span></h2>
+  <!-- -------------------------------------------------- Карточка до/после -->
+  <section class="wrap section" id="before-after">
+    <div class="section-head" data-reveal="up">
+      <div>
+        <p class="eyebrow">05 — Карточка до и после</p>
+        <h2 class="h2">Не «стало красивее»,<br>а решает <span class="accent">задачу</span></h2>
+      </div>
+      <p class="section-head__note">Оценку визуала даём по показателям карточки — CTR и конверсии в корзину, — а не по впечатлению.</p>
+    </div>
 
-    <div class="quotes" data-stagger="100">
-      <figure class="quote">
-        <div class="quote__mark" aria-hidden="true">«</div>
-        <blockquote><p>Пришли с хаосом в 400 карточках. Через квартал получили понятную экономику по каждой позиции и решение, что выводить из ассортимента.</p></blockquote>
-        <figcaption class="quote__author">
-          <span class="quote__avatar"><img src="assets/img/avatar-1.svg" alt="" width="200" height="200" loading="lazy"></span>
-          <span>
-            <span class="quote__name">Марина Долгова</span>
-            <span class="mono mono--xs">Основатель, бытовая химия</span>
-          </span>
-        </figcaption>
-      </figure>
+    <div class="ba-layout" data-reveal="fade">
+      <div class="ba" data-ba>
+        <div class="ba__before" aria-hidden="true">
+          <span class="ba__tag">До</span>
+          <span class="ba__ph ba__ph--a"></span>
+          <span class="ba__ph ba__ph--b"></span>
+          <span class="ba__ph ba__ph--c"></span>
+        </div>
+        <div class="ba__after" data-ba-after>
+          <span class="ba__tag">После</span>
+          <span class="ba__ph ba__ph--a"></span>
+          <span class="ba__ph ba__ph--b"></span>
+          <span class="ba__ph ba__ph--c"></span>
+          <span class="ba__ph ba__ph--d"></span>
+        </div>
+        <div class="ba__handle" data-ba-handle aria-hidden="true"><span>↔</span></div>
+        <label class="visually-hidden" for="ba-range">Сравнение карточки до и после</label>
+        <input class="ba__range" id="ba-range" type="range" min="0" max="100" value="50" data-ba-range>
+        <span class="ba__note mono mono--xs">Товар обезличен</span>
+      </div>
 
-      <figure class="quote">
-        <div class="quote__mark" aria-hidden="true">«</div>
-        <blockquote><p>Главное отличие — отчёты, которые читает финдиректор, а не только маркетолог. ДРР упал на треть, и это видно в P&amp;L.</p></blockquote>
-        <figcaption class="quote__author">
-          <span class="quote__avatar"><img src="assets/img/avatar-2.svg" alt="" width="200" height="200" loading="lazy"></span>
-          <span>
-            <span class="quote__name">Илья Романенко</span>
-            <span class="mono mono--xs">COO, текстильный бренд</span>
-          </span>
-        </figcaption>
-      </figure>
+      <ol class="ba-list">
+        <li>
+          <span class="ba-list__n">01</span>
+          <h3>Первый экран отвечает на возражение о составе</h3>
+          <p>Задача: в отзывах покупатели спрашивали о составе, а на обложке ответа не было.</p>
+        </li>
+        <li>
+          <span class="ba-list__n">02</span>
+          <h3>Характеристики вынесены в инфографику</h3>
+          <p>Задача: размер и объём видны без прокрутки описания.</p>
+        </li>
+        <li>
+          <span class="ba-list__n">03</span>
+          <h3>Одна мысль на слайд</h3>
+          <p>Задача: главное преимущество считывается на миниатюре в выдаче.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-      <figure class="quote quote--dark">
-        <div class="quote__mark" aria-hidden="true">«</div>
-        <blockquote><p>За год выросли с одного маркетплейса до трёх и ни разу не ушли в кассовый разрыв по поставкам. Это заслуга их планирования.</p></blockquote>
-        <figcaption class="quote__author">
-          <span class="quote__avatar"><img src="assets/img/avatar-3.svg" alt="" width="200" height="200" loading="lazy"></span>
-          <span>
-            <span class="quote__name">Дарья Ким</span>
-            <span class="mono mono--xs">CEO, электроника</span>
-          </span>
-        </figcaption>
-      </figure>
+  <!-- --------------------------------------------------------- Лид-магнит -->
+  <section class="wrap section" id="checklist">
+    <div class="magnet" data-reveal="up">
+      <div class="magnet__main">
+        <p class="eyebrow">Бесплатно · PDF</p>
+        <h2 class="h2 h2--lead">Чек-лист: 12 мест, где карточка <span class="accent">теряет покупателей</span></h2>
+        <p class="lead">Для тех, кто пока не готов к аудиту. Пройдите по своей карточке сами — за 20 минут станет понятно, с чего начинать.</p>
+
+        <form class="magnet__form" data-form="checklist" novalidate>
+          <div class="field field--inline">
+            <label for="cl-contact">Куда прислать</label>
+            <input id="cl-contact" name="contact" type="text" placeholder="E-mail или Telegram" required data-validate="contact" autocomplete="email">
+            <div class="field__error">Нужен e-mail или Telegram</div>
+          </div>
+          <button class="btn btn--accent" type="submit">Получить чек-лист</button>
+          <div class="form__status">Отправили. Если захотите разобрать результат — ответьте на письмо.</div>
+        </form>
+      </div>
+
+      <dl class="magnet__meta">
+        <div><dt>Триггер</dt><dd>Трафик на карточку есть, а добавлений в корзину мало</dd></div>
+        <div><dt>Что даём</dt><dd>12 проверок по обложке, первому экрану, характеристикам и отзывам</dd></div>
+        <div><dt>Что получаете</dt><dd>Список мест, которые стоит проверить в первую очередь</dd></div>
+        <div><dt>Дальше</dt><dd><a href="service-kartochki-seo.html">Услуга «Карточки и SEO» →</a></dd></div>
+      </dl>
     </div>
   </section>
 
   <!-- --------------------------------------------------------------- FAQ -->
-  <section class="wrap section" data-reveal="up" id="faq">
+  <section class="wrap section" id="faq">
     <div class="faq-layout">
-      <div>
-        <p class="eyebrow">07 — FAQ</p>
-        <h2 class="h2">Частые <span class="accent">вопросы</span></h2>
+      <div data-reveal="up">
+        <p class="eyebrow">06 — FAQ</p>
+        <h2 class="h2">Честные <span class="accent">ответы</span></h2>
       </div>
 
       <div class="faq" data-stagger="60">
         <div class="faq__item">
           <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-1">
-            С какого объёма продаж есть смысл работать?
+            С какого объёма есть смысл работать?
             <span class="faq__sign" aria-hidden="true">+</span>
           </button>
           <div class="faq__panel" id="faq-1" aria-hidden="true">
-            <div><p>Оптимально от 2 млн ₽ выручки в месяц. Ниже этого объёма выгоднее начать с разового аудита и внедрить рекомендации своими силами.</p></div>
+            <div><p>Порога нет: смотрим на задачу и объём работ. Точечные задачи берём от определённого объёма — обсудим на созвоне.</p></div>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-2">
-            Когда будет виден результат?
+            Когда будет результат?
             <span class="faq__sign" aria-hidden="true">+</span>
           </button>
           <div class="faq__panel" id="faq-2" aria-hidden="true">
-            <div><p>Первые изменения в трафике — на 2–3 неделе после обновления контента и семантики. Устойчивый рост выручки — на горизонте 2–4 месяцев.</p></div>
+            <div><p>Первые изменения в трафике видны после обновления контента и семантики. Устойчивый эффект оцениваем по данным, а не обещаем заранее.</p></div>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-3">
-            Вы работаете с конкурентами в одной нише?
+            Вы гарантируете рост продаж?
             <span class="faq__sign" aria-hidden="true">+</span>
           </button>
           <div class="faq__panel" id="faq-3" aria-hidden="true">
-            <div><p>Нет. В одной категории ведём одного клиента — это фиксируется в договоре вместе с NDA.</p></div>
+            <div><p>Нет. На продажи влияют цена, остатки, ассортимент и решения площадки. Мы отвечаем за работы и за проверку их эффекта.</p></div>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-4">
-            Кто отвечает за контент и съёмку?
+            Что нужно от нас?
             <span class="faq__sign" aria-hidden="true">+</span>
           </button>
           <div class="faq__panel" id="faq-4" aria-hidden="true">
-            <div><p>Внутренняя студия: фото, инфографика, видео и рич-контент. Съёмка оплачивается отдельно по смете проекта.</p></div>
+            <div><p>Доступ в кабинет, ретро-данные, ответственный за согласования и поддержание наличия товара.</p></div>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-5">
-            Какая отчётность и как часто?
+            Вы делаете съёмку?
             <span class="faq__sign" aria-hidden="true">+</span>
           </button>
           <div class="faq__panel" id="faq-5" aria-hidden="true">
-            <div><p>Живой BI-дашборд с доступом 24/7, письменный отчёт раз в неделю и стратегическая встреча раз в месяц.</p></div>
+            <div><p>Сейчас — дизайн карточек, инфографику и rich-контент. Съёмка не входит.</p></div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-6">
+            Как вы показываете результат?
+            <span class="faq__sign" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__panel" id="faq-6" aria-hidden="true">
+            <div><p>Фиксируем показатели до изменений и сравниваем после, отделяя эффект работ от цены, остатков и условий площадки.</p></div>
           </div>
         </div>
       </div>
@@ -460,18 +526,30 @@
   </section>
 
   <!-- ------------------------------------------------------------ Заявка -->
-  <section class="form-band" data-reveal="fade" id="lead">
+  <section class="form-band" id="lead" data-reveal="fade">
     <div class="wrap form-layout">
       <div>
-        <p class="eyebrow eyebrow--light">08 — Заявка</p>
-        <h2 class="h2 h2--lead">Обсудим ваш <span class="accent">проект</span></h2>
-        <p class="lead lead--light lead--narrow">Ответим в течение рабочего дня, зададим 5 вопросов о кабинете и пришлём предварительную оценку потенциала роста.</p>
+        <p class="eyebrow eyebrow--light">07 — Заявка на аудит</p>
+        <h2 class="h2 h2--lead">Разберём ваш <span class="accent">кабинет</span></h2>
+        <p class="lead lead--light lead--narrow">Расскажите, что происходит с продажами. На созвоне зададим уточняющие вопросы и определим, с чего начинать разбор.</p>
 
-        <div class="contact-list">
-          <div><a href="mailto:hello@kreametrika.com">hello@kreametrika.com</a></div>
-          <div><a href="tel:+74950000000">+7 495 000-00-00</a></div>
-          <div class="dim">Москва, Большая Новодмитровская 36</div>
-        </div>
+        <ol class="after-lead">
+          <li>
+            <span class="after-lead__n">01</span>
+            <h3>Короткий созвон</h3>
+            <p>Говорите со специалистом, который будет делать разбор, — не с менеджером по продажам.</p>
+          </li>
+          <li>
+            <span class="after-lead__n">02</span>
+            <h3>Что подготовить</h3>
+            <p>Доступ к кабинету и ретро-данные по продажам, рекламе и остаткам.</p>
+          </li>
+          <li>
+            <span class="after-lead__n">03</span>
+            <h3>Итог первой встречи</h3>
+            <p>Список участков, которые стоит проверить, и состав аудита под ваш кабинет.</p>
+          </li>
+        </ol>
       </div>
 
       <form class="form" data-form="lead" novalidate>
@@ -483,8 +561,8 @@
 
         <div class="field">
           <label for="lead-contact">Контакт</label>
-          <input id="lead-contact" name="contact" type="text" placeholder="Телефон или e-mail" required data-validate="contact" autocomplete="email">
-          <div class="field__error">Нужен телефон или e-mail</div>
+          <input id="lead-contact" name="contact" type="text" placeholder="Телефон, e-mail или Telegram" required data-validate="contact" autocomplete="email">
+          <div class="field__error">Нужен телефон, e-mail или Telegram</div>
         </div>
 
         <fieldset class="fieldset">
@@ -498,13 +576,23 @@
         </fieldset>
 
         <div class="field">
+          <label for="lead-cat">Категория товара</label>
+          <input id="lead-cat" name="category" type="text" placeholder="Например, уходовая косметика">
+        </div>
+
+        <div class="field">
           <label for="lead-task">Задача</label>
-          <textarea id="lead-task" name="task" rows="3" placeholder="Коротко о товаре и текущих объёмах"></textarea>
+          <textarea id="lead-task" name="task" rows="3" placeholder="Что происходит с продажами"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="lead-volume">Объём продаж · необязательно</label>
+          <input id="lead-volume" name="volume" type="text" placeholder="Поможет точнее оценить объём работ">
         </div>
 
         <button class="btn btn--light" type="submit">Отправить заявку</button>
 
-        <div class="form__status">Заявка отправлена. Свяжемся с вами в течение рабочего дня.</div>
+        <div class="form__status">Заявка отправлена. Свяжемся с вами и зададим несколько уточняющих вопросов.</div>
 
         <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой обработки персональных данных</a>.</p>
       </form>
@@ -517,30 +605,32 @@
   <div class="wrap footer__grid">
     <div>
       <img class="logo__lockup logo__lockup--footer" src="assets/brand/lockup.svg" alt="Креаметрика" width="265" height="40">
-      <div class="logo__tag">агентство роста в e-commerce</div>
+      <div class="logo__tag">Wildberries · Ozon</div>
       <div class="footer__bars" aria-hidden="true"><span></span><span></span><span></span></div>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Услуги</div>
-      <a href="index.html#services">Ведение Wildberries</a>
-      <a href="index.html#services">Ведение Ozon</a>
-      <a href="index.html#services">Аналитика и BI</a>
-      <a href="index.html#services">Аудит кабинета</a>
+      <a href="service-diagnostika.html">Диагностика воронки</a>
+      <a href="service-kartochki-seo.html">Карточки и SEO</a>
+      <a href="service-reklama.html">Реклама</a>
+      <a href="service-kontent.html">Контент бренда</a>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Агентство</div>
+      <a href="index.html#process">Как работаем</a>
+      <a href="index.html#report">Образец отчёта</a>
       <a href="cases.html">Кейсы</a>
-      <a href="index.html#pricing">Тарифы</a>
-      <a href="contacts.html">Контакты</a>
+      <a href="index.html#faq">Вопросы и ответы</a>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Контакты</div>
-      <a href="mailto:hello@kreametrika.com">hello@kreametrika.com</a>
-      <a href="tel:+74950000000">+7 495 000-00-00</a>
-      <span class="muted">Москва, Б. Новодмитровская 36</span>
+      <!-- Заменить на реальные контакты агентства -->
+      <span class="pending">[Почта — от заказчика]</span>
+      <span class="pending">[Telegram — от заказчика]</span>
+      <a class="link-mono" href="index.html#lead">Оставить заявку →</a>
     </div>
   </div>
 

@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="assets/js/main.js" defer></script>
+<link rel="stylesheet" href="assets/css/style.css?v=20260924">
+<script src="assets/js/main.js?v=20260924" defer></script>
 </head>
 
 <body data-page="privacy">
@@ -27,17 +27,18 @@
   <div class="wrap header__inner">
     <a class="logo" href="index.html" aria-label="Креаметрика — на главную">
       <img class="logo__lockup" src="assets/brand/lockup.svg" alt="Креаметрика" width="238" height="36">
-      <span class="logo__tag">агентство роста в e-commerce</span>
+      <span class="logo__tag">Wildberries · Ozon</span>
     </a>
 
     <nav class="nav" aria-label="Основная навигация">
+      <a href="index.html#funnel">Воронка</a>
       <a href="index.html#services" data-nav="services">Услуги</a>
+      <a href="index.html#process">Как работаем</a>
       <a href="cases.html" data-nav="cases">Кейсы</a>
-      <a href="index.html#pricing" data-nav="pricing">Тарифы</a>
-      <a href="contacts.html" data-nav="contacts">Контакты</a>
+      <a href="index.html#faq">FAQ</a>
     </nav>
 
-    <a class="btn btn--ink header__cta" href="contacts.html#form">Обсудить проект</a>
+    <a class="btn btn--ink header__cta" href="index.html#lead">Разобрать кабинет</a>
 
     <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Меню">
       <span></span><span></span><span></span>
@@ -46,15 +47,15 @@
 </header>
 
 <div class="drawer" id="drawer">
+  <a href="index.html#funnel">Воронка</a>
   <a href="index.html#services">Услуги</a>
+  <a href="index.html#process">Как работаем</a>
   <a href="cases.html">Кейсы</a>
-  <a href="index.html#pricing">Тарифы</a>
-  <a href="contacts.html">Контакты</a>
-  <a class="drawer__cta" href="contacts.html#form">Обсудить проект</a>
+  <a href="index.html#faq">FAQ</a>
+  <a class="drawer__cta" href="index.html#lead">Разобрать мой кабинет</a>
   <div class="drawer__foot">
-    HELLO@KREAMETRIKA.COM<br>
-    +7 495 000-00-00<br>
-    МОСКВА, Б. НОВОДМИТРОВСКАЯ 36
+    ОТВЕЧАЕМ В TELEGRAM И ПО ПОЧТЕ<br>
+    КОНТАКТЫ — В ПОДВАЛЕ САЙТА
   </div>
 </div>
 
@@ -92,30 +93,32 @@
   <div class="wrap footer__grid">
     <div>
       <img class="logo__lockup logo__lockup--footer" src="assets/brand/lockup.svg" alt="Креаметрика" width="265" height="40">
-      <div class="logo__tag">агентство роста в e-commerce</div>
+      <div class="logo__tag">Wildberries · Ozon</div>
       <div class="footer__bars" aria-hidden="true"><span></span><span></span><span></span></div>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Услуги</div>
-      <a href="index.html#services">Ведение Wildberries</a>
-      <a href="index.html#services">Ведение Ozon</a>
-      <a href="index.html#services">Аналитика и BI</a>
-      <a href="index.html#services">Аудит кабинета</a>
+      <a href="service-diagnostika.html">Диагностика воронки</a>
+      <a href="service-kartochki-seo.html">Карточки и SEO</a>
+      <a href="service-reklama.html">Реклама</a>
+      <a href="service-kontent.html">Контент бренда</a>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Агентство</div>
+      <a href="index.html#process">Как работаем</a>
+      <a href="index.html#report">Образец отчёта</a>
       <a href="cases.html">Кейсы</a>
-      <a href="index.html#pricing">Тарифы</a>
-      <a href="contacts.html">Контакты</a>
+      <a href="index.html#faq">Вопросы и ответы</a>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Контакты</div>
-      <a href="mailto:hello@kreametrika.com">hello@kreametrika.com</a>
-      <a href="tel:+74950000000">+7 495 000-00-00</a>
-      <span class="muted">Москва, Б. Новодмитровская 36</span>
+      <!-- Заменить на реальные контакты агентства -->
+      <span class="pending">[Почта — от заказчика]</span>
+      <span class="pending">[Telegram — от заказчика]</span>
+      <a class="link-mono" href="index.html#lead">Оставить заявку →</a>
     </div>
   </div>
 
@@ -126,6 +129,5 @@
     </div>
   </div>
 </footer>
-
 </body>
 </html>

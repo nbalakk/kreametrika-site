@@ -444,4 +444,49 @@
       });
     }
   })();
+
+  /* ------------------------------------------------- 12. Ступени воронки */
+  (function funnel() {
+    var steps = document.querySelectorAll('.fstep');
+    if (!steps.length) return;
+
+    var panels = document.querySelectorAll('.fpanel');
+
+    function select(step) {
+      steps.forEach(function (s) { s.setAttribute('aria-selected', String(s === step)); });
+      panels.forEach(function (p) { p.hidden = p.id !== step.getAttribute('aria-controls'); });
+    }
+
+    steps.forEach(function (step) {
+      step.addEventListener('click', function () { select(step); });
+
+      // Стрелками между ступенями — как в обычном наборе вкладок
+      step.addEventListener('keydown', function (e) {
+        var i = Array.prototype.indexOf.call(steps, step);
+        var next = null;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = steps[(i + 1) % steps.length];
+        if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') next = steps[(i - 1 + steps.length) % steps.length];
+        if (!next) return;
+        e.preventDefault();
+        select(next);
+        next.focus();
+      });
+    });
+  })();
+
+  /* --------------------------------------------- 13. Карточка до / после */
+  (function beforeAfter() {
+    var box = document.querySelector('[data-ba]');
+    if (!box) return;
+
+    var range = box.querySelector('[data-ba-range]');
+    if (!range) return;
+
+    function apply() {
+      box.style.setProperty('--split', range.value + '%');
+    }
+    range.addEventListener('input', apply);
+    apply();
+  })();
+
 })();
