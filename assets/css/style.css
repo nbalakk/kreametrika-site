@@ -2016,6 +2016,142 @@ button, input, textarea, select { font: inherit; color: inherit; }
   .marquee:hover .marquee__track { animation-play-state: running; }
 }
 
+
+/* --- Правки 27.09 --- */
+
+/* Тёмная карточка услуги: карточка стала ссылкой, и общее правило
+   .service { color: inherit } перебивало белый текст — заголовок
+   сливался с чёрным фоном. */
+.service--dark,
+.service--dark .service__title { color: #fff; }
+.service--dark:hover .service__title { color: var(--accent); }
+
+/* Два пути: конкретная задача или диагностика */
+.paths {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+  gap: 24px;
+}
+.path {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 36px 34px 38px;
+  min-height: 300px;
+}
+.path--dark { background: var(--ink); color: #fff; border-color: var(--ink); }
+.path__tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 26px;
+}
+.path__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+.path p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 0 28px;
+  max-width: 440px;
+}
+.path--dark p { color: var(--dim-2); }
+.path .btn { margin-top: auto; }
+
+.rule {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 36px;
+}
+.rule li { display: flex; gap: 10px; align-items: baseline; font-size: 14px; color: var(--ink-soft); }
+.rule span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--accent);
+}
+
+/* Образец отчёта: таблица-сводка и воронка с числами */
+.sheet__table--grid { font-size: 11px; }
+.sheet__table--grid th,
+.sheet__table--grid td { padding-right: 6px; white-space: nowrap; }
+.sheet__table--grid td {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .02em;
+  text-transform: none;
+  color: var(--ink-soft);
+}
+.sheet__table--grid td:first-child { color: var(--muted); }
+.sheet__table--grid td:last-child { font-size: 10px; letter-spacing: .02em; }
+.sheet__table td.warn { color: var(--accent); font-weight: 500; }
+.sheet__text--note { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
+.warn-dot { width: 8px; height: 8px; background: var(--accent); flex: none; }
+.sheet__bars--vals span { height: 24px; min-width: 96px; }
+.sheet__bars--vals i { height: 24px; }
+.sheet__bars--vals b {
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 0;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.sheet__bars--vals span[style*="100%"] b { left: auto; right: 8px; }
+.sheet__bars--vals span.hot b { color: var(--accent); }
+
+/* До / после: результат цифрами */
+.ba-result { display: grid; gap: 12px; margin-top: 4px; }
+.ba-result > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+}
+.ba-result b {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -.02em;
+  white-space: nowrap;
+}
+.ba-result i { font-style: normal; color: var(--muted); font-weight: 500; }
+.ba-result em { font-style: normal; color: var(--accent); }
+
+@media (max-width: 640px) {
+  .path { padding: 28px 22px 30px; min-height: 0; }
+  .path__tag { margin-bottom: 18px; }
+  .path .btn { width: 100%; }
+  .rule { flex-direction: column; gap: 10px; }
+  .ba-result b { font-size: 19px; }
+}
+
+/* Колонка с номером приоритета не слипается с действием */
+.sheet__table th:first-child, .sheet__table td:first-child { width: 26px; padding-right: 8px; }
+.sheet__table--grid th:first-child, .sheet__table--grid td:first-child { width: auto; }
+
 /* ------------------------------------------------------------- 25. Печать */
 @media print {
   .header, .drawer, .burger, .marquee, .form-band, .footer__bars, .progress { display: none !important; }

@@ -489,4 +489,13 @@
     apply();
   })();
 
+  /* ------------------------------------------ 14. С какой кнопки пришла заявка */
+  (function intent() {
+    var field = document.querySelector('[data-intent-field]');
+    if (!field) return;
+    document.querySelectorAll('[data-intent]').forEach(function (link) {
+      link.addEventListener('click', function () { field.value = link.dataset.intent; });
+    });
+  })();
+
 })();

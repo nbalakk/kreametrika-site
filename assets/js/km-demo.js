@@ -11,11 +11,11 @@ const easeCursor = p => 1 - Math.pow(1 - p, 3.4);
 const fmt = v => v.toFixed(1).replace('.', ',');
 
 const FUN = [
-  { l: 'ПОКАЗ',    v0: 4.1,  v1: 4.1,  w0: 100, w1: 100 },
-  { l: 'КЛИК',     v0: 88.0, v1: 88.0, w0: 72,  w1: 72 },
-  { l: 'КАРТОЧКА', v0: 5.3,  v1: 7.9,  w0: 60,  w1: 60, hot: 1 },
-  { l: 'КОРЗИНА',  v0: 61.0, v1: 63.5, w0: 20,  w1: 30 },
-  { l: 'ЗАКАЗ',    v0: 83.0, v1: 83.0, w0: 15,  w1: 23 }
+  { l: 'ПОКАЗ',    v0: 100,  v1: 100,  w0: 100, w1: 100 },
+  { l: 'ПЕРЕХОД',  v0: 4.1,  v1: 4.1,  w0: 72,  w1: 72 },
+  { l: 'КОРЗИНА',  v0: 5.3,  v1: 7.9,  w0: 60,  w1: 60, hot: 1 },
+  { l: 'ЗАКАЗ',    v0: 61.0, v1: 63.5, w0: 20,  w1: 30 },
+  { l: 'ВЫКУП',    v0: 83.0, v1: 83.0, w0: 15,  w1: 23 }
 ];
 const CARDS = [
   ['SKU-0412', 'left:34%;right:34%;top:18%;bottom:14%'],
@@ -153,7 +153,7 @@ const html = `
       <div class="scan"></div>
     </div>
     <div class="s-fun">
-      <div class="fh fx L"><span><b>SKU-0417</b> · РАЗБОР ВОРОНКИ</span><span>ПЕРЕХОД ДАЛЬШЕ, %</span></div>
+      <div class="fh fx L"><span><b>SKU-0417</b> · РАЗБОР ВОРОНКИ</span><span>КОНВЕРСИЯ ЭТАПА, %</span></div>
       <div class="fb">
         <div class="fl">
           ${FUN.map(f => `<div class="row fx L"><div class="trk"><div class="bar"></div>${f.hot ? '<div class="hotb"></div>' : ''}<span class="lb">${f.l}</span>${f.hot ? '<span class="cap">ЗДЕСЬ ТЕРЯЕТСЯ<br>БОЛЬШЕ ВСЕГО</span>' : ''}</div><div class="val">0,0</div></div>`).join('')}
