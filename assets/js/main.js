@@ -498,4 +498,42 @@
     });
   })();
 
+  /* ------------------------------------------------ 15. Бесконечная лента */
+  (function marquee() {
+    var track = document.querySelector('.marquee__track');
+    if (!track) return;
+    var group = track.querySelector('.marquee__group');
+    if (!group) return;
+
+    var SPEED = 60; // пикселей в секунду — одинаково на любой ширине экрана
+
+    function build() {
+      // Оставляем один исходный набор и клонируем его, пока лента не станет
+      // шире экрана с запасом на один сдвиг — тогда конец ленты не виден никогда.
+      track.querySelectorAll('.marquee__group').forEach(function (g, i) {
+        if (i > 0) g.remove();
+      });
+      var w = group.getBoundingClientRect().width;
+      if (!w) return;
+      var need = Math.ceil(window.innerWidth / w) + 1;
+      for (var i = 0; i < need; i++) {
+        var copy = group.cloneNode(true);
+        copy.setAttribute('aria-hidden', 'true');
+        track.appendChild(copy);
+      }
+      track.style.setProperty('--marquee-shift', w + 'px');
+      track.style.setProperty('--marquee-dur', (w / SPEED).toFixed(2) + 's');
+    }
+
+    var timer;
+    window.addEventListener('resize', function () {
+      clearTimeout(timer);
+      timer = setTimeout(build, 200);
+    }, { passive: true });
+
+    // Ширина группы зависит от шрифта — считаем после его загрузки
+    (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(build);
+    build();
+  })();
+
 })();

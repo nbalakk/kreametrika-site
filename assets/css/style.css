@@ -490,20 +490,28 @@ button, input, textarea, select { font: inherit; color: inherit; }
   padding: 14px 0;
   margin-top: 20px;
 }
+/* Лента из одинаковых групп. Сдвиг — ровно на ширину одной группы
+   (--marquee-shift), поэтому стык незаметен. Отступы — через padding,
+   а не gap: gap не входит в ширину группы, и сдвиг промахивался бы
+   на один промежуток — отсюда был рывок. Сколько групп нужно, чтобы
+   закрыть любой экран, считает JS. */
 .marquee__track {
   display: flex;
   will-change: transform;
-  gap: 56px;
   width: max-content;
-  animation: marquee 34s linear infinite;
+  animation: marquee var(--marquee-dur, 34s) linear infinite;
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: .18em;
 }
-.marquee__track span { white-space: nowrap; }
+.marquee__group { display: flex; flex: none; }
+.marquee__group span { white-space: nowrap; padding-right: 56px; }
 .marquee__track .x { color: var(--accent); }
 .marquee:hover .marquee__track { animation-play-state: paused; }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-1 * var(--marquee-shift, 50%))); }
+}
 @media (prefers-reduced-motion: reduce) { .marquee__track { animation: none; } }
 
 /* --------------------------------------------------------------- 9. Услуги */
@@ -1879,7 +1887,8 @@ button, input, textarea, select { font: inherit; color: inherit; }
 
   /* Бегущая строка — короче шаг, чтобы не пролетала мимо */
   .marquee { padding: 11px 0; }
-  .marquee__track { gap: 36px; font-size: 11px; animation-duration: 26s; }
+  .marquee__track { font-size: 11px; }
+  .marquee__group span { padding-right: 36px; }
 
   /* Секции и карточки */
   .section-head { margin-bottom: 28px; gap: 20px; }
