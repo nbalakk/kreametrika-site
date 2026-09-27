@@ -485,6 +485,30 @@
     function apply() {
       box.style.setProperty('--split', range.value + '%');
     }
+
+    function setFromX(x) {
+      var r = box.getBoundingClientRect();
+      var v = Math.max(0, Math.min(100, (x - r.left) / r.width * 100));
+      range.value = Math.round(v);
+      apply();
+    }
+
+    // Перетаскивание по самому блоку. Мышью — сразу по нажатию; пальцем — только
+    // при движении: если человек листает вверх-вниз, браузер забирает жест
+    // себе (touch-action: pan-y) и присылает pointercancel, ползунок не дёргается.
+    var dragging = false;
+    box.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      dragging = true;
+      if (e.pointerType === 'mouse') setFromX(e.clientX);
+    });
+    box.addEventListener('pointermove', function (e) {
+      if (dragging) setFromX(e.clientX);
+    });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (type) {
+      box.addEventListener(type, function () { dragging = false; });
+    });
+
     range.addEventListener('input', apply);
     apply();
   })();

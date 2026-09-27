@@ -1483,17 +1483,27 @@ button, input, textarea, select { font: inherit; color: inherit; }
   color: #fff;
   font-size: 13px;
 }
+/* Раньше невидимый ползунок накрывал весь блок, и на телефоне свайп по нему
+   двигал ползунок вместо прокрутки страницы. Теперь перетаскивание ловит сам
+   блок через pointer-события, а touch-action: pan-y отдаёт вертикальный свайп
+   странице. Ползунок остался только для клавиатуры и скринридеров. */
+.ba {
+  touch-action: pan-y;
+  cursor: ew-resize;
+  user-select: none;
+  -webkit-user-select: none;
+}
 .ba__range {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 1px;
   margin: 0;
   opacity: 0;
-  cursor: ew-resize;
-  z-index: 4;
+  pointer-events: none;
 }
-.ba__range:focus-visible { opacity: .01; outline: 2px solid var(--accent); outline-offset: -2px; }
+.ba:focus-within { outline: 2px solid var(--accent); outline-offset: 3px; }
 .ba__note {
   position: absolute;
   left: 12px;
