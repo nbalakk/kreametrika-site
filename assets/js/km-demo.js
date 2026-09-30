@@ -82,7 +82,7 @@ const css = `
 .cst{height:18px;display:flex;align-items:center}
 .cst span{font-size:10px;letter-spacing:.12em;color:#4A4743}
 .cst.ok span{color:#B5B0AA}
-.cst.bad span{background:#F8211F;color:#fff;padding:3px 6px}
+.cst.bad span{background:#D81A18;color:#fff;padding:3px 6px}
 .cst.set span{animation:none}
 .scan{position:absolute;left:-20px;right:-20px;top:0;height:1px;background:#F8211F;opacity:0;transition:opacity .3s linear}
 .s-fun{position:absolute;inset:18px 20px 20px}
@@ -97,7 +97,7 @@ const css = `
 .trk{position:relative;background:#141311;border:1px solid #221F1D}
 .bar,.hotb{position:absolute;inset:0;clip-path:inset(0 100% 0 0);transition:clip-path .9s var(--e),opacity .6s var(--e)}
 .bar{background:#34312D}
-.hotb{background:#F8211F;opacity:0}
+.hotb{background:#D81A18;opacity:0}
 .hotb.on{opacity:1}
 .lb{position:absolute;left:10px;top:0;bottom:0;display:flex;align-items:center;font-size:10px;letter-spacing:.12em;color:#F4F2EE}
 .cap{position:absolute;right:8px;top:0;bottom:0;display:flex;align-items:center;text-align:right;font-size:10px;line-height:1.15;letter-spacing:.02em;color:#F4F2EE;opacity:0;transition:opacity .6s var(--e)}
