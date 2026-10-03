@@ -26,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="assets/css/style.css?v=20260930c">
-<script src="assets/js/main.js?v=20260930c" defer></script>
+<link rel="stylesheet" href="assets/css/style.css?v=20261003">
+<script src="assets/js/main.js?v=20261003" defer></script>
 
 <script type="application/ld+json">
 {
@@ -56,11 +56,15 @@
       <a href="index.html#funnel">Воронка</a>
       <a href="index.html#services" data-nav="services">Услуги</a>
       <a href="index.html#process">Как работаем</a>
-      <a href="cases.html" data-nav="cases">Кейсы</a>
       <a href="index.html#faq">FAQ</a>
     </nav>
 
-    <a class="btn btn--ink header__cta" href="#lead">Получить аудит</a>
+    <a class="header__phone" href="tel:+74956422658">
+      <span class="header__phone-num">+7 (495) 642-26-58</span>
+      <span class="header__phone-note">Ответим в течение 15 минут, 10:00–22:00</span>
+    </a>
+
+    <a class="btn btn--ink header__cta" href="#lead">Обсудить задачу</a>
 
     <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Меню">
       <span></span><span></span><span></span>
@@ -72,12 +76,11 @@
   <a href="index.html#funnel">Воронка</a>
   <a href="index.html#services">Услуги</a>
   <a href="index.html#process">Как работаем</a>
-  <a href="cases.html">Кейсы</a>
   <a href="index.html#faq">FAQ</a>
-  <a class="drawer__cta" href="#lead">Получить аудит и план роста</a>
+  <a class="drawer__cta" href="#lead">Обсудить задачу</a>
   <div class="drawer__foot">
-    ОТВЕЧАЕМ В TELEGRAM И ПО ПОЧТЕ<br>
-    КОНТАКТЫ — В ПОДВАЛЕ САЙТА
+    <a class="drawer__phone" href="tel:+74956422658">+7 (495) 642-26-58</a>
+    <span>Ответим в течение 15 минут, 10:00–22:00</span>
   </div>
 </div>
 
@@ -88,7 +91,7 @@
   </div>
 
   <section class="wrap svc-hero">
-    <p class="eyebrow">Услуга 02 · Контент и поиск</p>
+    <p class="eyebrow">Услуга 03 · Контент и поиск</p>
     <h1 class="h1" data-reveal="fade">
       <span class="line"><span>Карточки</span></span>
       <span class="line"><span class="accent">и SEO</span></span>
@@ -127,18 +130,18 @@
     <div class="steps" data-stagger="80">
       <div class="step step--first">
         <div class="step__num">01</div>
-        <h3>Заявка и созвон</h3>
-        <p>Описываете задачу, мы задаём уточняющие вопросы.</p>
+        <h3>Заявка и звонок</h3>
+        <p>Менеджер уточняет площадку, категорию и задачу и назначает встречу.</p>
       </div>
       <div class="step">
         <div class="step__num">02</div>
-        <h3>Доступы и данные</h3>
-        <p>Доступ к кабинету и ретро-данные по товарам, рекламе и остаткам.</p>
+        <h3>Встреча с экспертом</h3>
+        <p>30–40 минут, бесплатно: смотрим 1–2 карточки и определяем состав работ.</p>
       </div>
       <div class="step">
         <div class="step__num">03</div>
         <h3>Состав и старт</h3>
-        <p>Согласуем состав работ и показатели, по которым проверим эффект.</p>
+        <p>Фиксируем состав работ, стоимость и показатели для проверки до начала.</p>
       </div>
     </div>
   </section>
@@ -148,27 +151,85 @@
       <div>
         <p class="eyebrow eyebrow--light">Заявка</p>
         <h2 class="h2 h2--lead">Обсудим <span class="accent">задачу</span></h2>
-        <p class="lead lead--light lead--narrow">Расскажите, что нужно, — согласуем объём работ и показатели, по которым проверим результат. Если причина потерь пока неясна, начнём с диагностики.</p>
+        <p class="lead lead--light lead--narrow">Расскажите, что происходит с продажами. Менеджер свяжется с вами, уточнит задачу и назначит бесплатную встречу с экспертом на 30–40 минут.</p>
       </div>
 
       <form class="form" data-form="service-kartochki-seo" novalidate>
+        <input type="hidden" name="intent" value="" data-intent-field>
         <div class="field">
           <label for="s-name">Имя</label>
           <input id="s-name" name="name" type="text" placeholder="Как к вам обращаться" required autocomplete="name">
           <div class="field__error">Заполните поле</div>
         </div>
+
         <div class="field">
           <label for="s-contact">Контакт</label>
-          <input id="s-contact" name="contact" type="text" placeholder="Телефон, e-mail или Telegram" required data-validate="contact" autocomplete="email">
+          <input id="s-contact" name="contact" type="text" placeholder="Телефон, e-mail или Telegram" required data-validate="contact" autocomplete="tel">
           <div class="field__error">Нужен телефон, e-mail или Telegram</div>
         </div>
+
+        <div class="field">
+          <label for="s-shop">Ссылка на магазин или карточку</label>
+          <input id="s-shop" name="shop_url" type="text" inputmode="url" placeholder="wildberries.ru/… или ozon.ru/…" required data-validate="url" autocomplete="url">
+          <div class="field__error">Нужна ссылка на магазин или карточку</div>
+        </div>
+
+        <fieldset class="fieldset">
+          <legend class="mono mono--xs">Площадки</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="platform" value="Wildberries">Wildberries</label>
+            <label class="choice"><input type="radio" name="platform" value="Ozon">Ozon</label>
+            <label class="choice"><input type="radio" name="platform" value="Обе">Обе</label>
+            <label class="choice"><input type="radio" name="platform" value="Только планирую">Только планирую</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="s-cat">Категория товара</label>
+          <select id="s-cat" name="category" data-other-target="s-cat-other">
+            <option value="">Выберите категорию</option>
+            <option value="Косметика и уход">Косметика и уход</option>
+            <option value="БАДы">БАДы</option>
+            <option value="Бытовая химия">Бытовая химия</option>
+            <option value="Личная гигиена">Личная гигиена</option>
+            <option value="Медицинские изделия">Медицинские изделия</option>
+            <option value="Другое">Другое</option>
+          </select>
+        </div>
+
+        <div class="field" data-other-field="s-cat-other">
+          <label for="s-cat-other">Какая категория</label>
+          <input id="s-cat-other" name="category_other" type="text" placeholder="Например, товары для дома">
+        </div>
+
+        <div class="field">
+          <label for="s-volume">Объём продаж в месяц · необязательно</label>
+          <select id="s-volume" name="volume">
+            <option value="">Не указывать</option>
+            <option value="до 500 тыс. ₽">до 500 тыс. ₽</option>
+            <option value="0,5–2 млн ₽">0,5–2 млн ₽</option>
+            <option value="2–5 млн ₽">2–5 млн ₽</option>
+            <option value="больше 5 млн ₽">больше 5 млн ₽</option>
+          </select>
+        </div>
+
         <div class="field">
           <label for="s-task">Задача</label>
           <textarea id="s-task" name="task" rows="3" placeholder="Что происходит с продажами"></textarea>
         </div>
-        <button class="btn btn--light" type="submit">Обсудить задачу</button>
-        <div class="form__status">Заявка отправлена. Свяжемся с вами и зададим несколько уточняющих вопросов.</div>
-        <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой обработки персональных данных</a>.</p>
+
+        <div class="field field--consent">
+          <label class="consent">
+            <input type="checkbox" name="consent" value="да" required>
+            <span class="consent__box" aria-hidden="true"></span>
+            <span class="consent__text">Даю согласие на обработку персональных данных в соответствии с <a href="privacy.html">политикой конфиденциальности</a></span>
+          </label>
+          <div class="field__error">Нужно согласие на обработку данных</div>
+        </div>
+
+        <button class="btn btn--light" type="submit">Отправить заявку</button>
+
+        <div class="form__status">Заявка отправлена. Свяжемся с вами в течение 15 минут в рабочее время (10:00–22:00), в другое время — до 10:00 следующего дня.</div>
       </form>
     </div>
   </section>
@@ -185,25 +246,24 @@
 
     <div class="footer__col">
       <div class="mono mono--xs">Услуги</div>
-      <a href="service-diagnostika.html">Диагностика воронки</a>
+      <a href="service-diagnostika.html">Диагностика контентной воронки</a>
+      <a href="service-audit.html">Комплексный аудит</a>
       <a href="service-kartochki-seo.html">Карточки и SEO</a>
-      <a href="service-reklama.html">Реклама</a>
-      <a href="service-kontent.html">Контент-стратегия и дизайн</a>
+      <a href="service-pererabotka.html">Переработка карточки под ключ</a>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Агентство</div>
       <a href="index.html#process">Как работаем</a>
       <a href="index.html#report">Образец отчёта</a>
-      <a href="cases.html">Кейсы</a>
-      <a href="index.html#faq">Вопросы и ответы</a>
+          <a href="index.html#faq">Вопросы и ответы</a>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Контакты</div>
-      <!-- Заменить на реальные контакты агентства -->
-      <span class="pending">[Почта — от заказчика]</span>
-      <span class="pending">[Telegram — от заказчика]</span>
+      <a href="tel:+74956422658">+7 (495) 642-26-58</a>
+      <span class="footer__hours">Ответим в течение 15 минут, 10:00–22:00</span>
+      <!-- Почта на домене, Telegram и MAX — добавить после создания -->
       <a class="link-mono" href="index.html#lead">Оставить заявку →</a>
     </div>
   </div>

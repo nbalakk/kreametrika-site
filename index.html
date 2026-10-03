@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Креаметрика — находим, где бренд теряет продажи на маркетплейсах</title>
-<meta name="description" content="Находим, где бренд теряет продажи на Wildberries и Ozon: разбор воронки от показа до выкупа, оптимизация карточек и SEO, аудит рекламы. Эффект проверяем по показателям.">
+<title>Аудит и диагностика карточек Ozon и Wildberries — Креаметрика</title>
+<meta name="description" content="Находим, где карточки и реклама теряют покупателей на Ozon и WB: диагностика воронки, SEO, переработка карточек. Эффект проверяем по цифрам.">
 <meta name="theme-color" content="#F4F2EE">
 <link rel="canonical" href="https://nbalakk.github.io/kreametrika-site/">
 
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Креаметрика">
 <meta property="og:title" content="Находим, где бренд теряет продажи">
-<meta property="og:description" content="Разбираем путь покупателя от показа до заказа на Wildberries и Ozon. Фиксируем показатели до изменений и проверяем эффект по данным.">
+<meta property="og:description" content="Находим, где карточки и реклама теряют покупателей на Ozon и WB: диагностика воронки, SEO, переработка карточек. Эффект проверяем по цифрам.">
 <meta property="og:url" content="https://nbalakk.github.io/kreametrika-site/">
 <meta property="og:image" content="https://nbalakk.github.io/kreametrika-site/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -26,16 +26,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="assets/css/style.css?v=20260930c">
-<script src="assets/js/main.js?v=20260930c" defer></script>
-<script src="assets/js/km-demo.js?v=20260930c" defer></script>
+<link rel="stylesheet" href="assets/css/style.css?v=20261003">
+<script src="assets/js/main.js?v=20261003" defer></script>
+<script src="assets/js/km-demo.js?v=20261003" defer></script>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Креаметрика",
-  "description": "Агентство продвижения на маркетплейсах: разбор воронки, оптимизация карточек и SEO, аудит рекламы, контент бренда.",
+  "description": "Агентство продвижения на маркетплейсах: диагностика контентной воронки, аудит кабинета, карточки и SEO, переработка карточек.",
+  "telephone": "+7 495 642-26-58",
   "url": "https://nbalakk.github.io/kreametrika-site/",
   "logo": "https://nbalakk.github.io/kreametrika-site/assets/brand/badge.svg",
   "areaServed": "RU"
@@ -46,9 +47,94 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "С какого объёма есть смысл работать?", "acceptedAnswer": { "@type": "Answer", "text": "Порога нет: смотрим на задачу и объём работ. Точечные задачи берём от определённого объёма — обсудим на созвоне." } },
-    { "@type": "Question", "name": "Вы гарантируете рост продаж?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. На продажи влияют цена, остатки, ассортимент и решения площадки. Мы отвечаем за работы и за проверку их эффекта." } },
-    { "@type": "Question", "name": "Как вы показываете результат?", "acceptedAnswer": { "@type": "Answer", "text": "Фиксируем показатели до изменений и сравниваем после, отделяя эффект работ от цены, остатков и условий площадки." } }
+    {
+      "@type": "Question",
+      "name": "Первая встреча платная?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. За 30–40 минут уточняем задачу, вместе смотрим 1–2 карточки, называем 2–3 наблюдения и определяем, нужен ли аудит и что в него войдёт. Это не аудит: письменного отчёта и плана внедрения на встрече нет."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "С какого объёма есть смысл работать?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Публичного порога нет. Важнее, чтобы у вас уже были продажи и данные за несколько месяцев, бюджет и возможность внедрять изменения. Минимальная задача — одна карточка под ключ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько стоит?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Стоимость зависит от числа площадок, категорий, товаров и состава работ. Рассчитываем и фиксируем цену до начала проекта. Цена диагностики контентной воронки — на её странице."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Чем ваша диагностика отличается от бесплатного аудита в сервисах?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Автоматический отчёт показывает показатели. Мы связываем их по всей воронке, проверяем причины с учётом цены, остатков и рекламы и даём план: что исправить первым и как измерить результат. По каждой проблеме — что происходит, чем подтверждается, на что влияет, что исправить."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Когда будет результат?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Сроки работ называем и фиксируем до начала — после оценки площадок, числа товаров и данных. Эффект изменений проверяем по цифрам за одинаковые периоды до и после. Сроки роста продаж не обещаем: на них влияют цена, остатки и решения площадки."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Вы гарантируете рост продаж?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. На продажи влияют цена, остатки, ассортимент и решения площадки. Мы отвечаем за работы и за проверку их эффекта."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как вы показываете результат?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Фиксируем показатели до изменений и сравниваем после, отделяя эффект работ от цены, остатков и условий площадки."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что нужно от нас?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Для первой встречи — ссылка на магазин, 2–3 карточки и пара слов о задаче. Для аудита — доступ к кабинету с правами на просмотр или выгрузки: воронка по товарам, заказы и выкупы, реклама, остатки, история цен и акций. Для расчёта прибыльности — ещё себестоимость, комиссии и логистика."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Вы ведёте магазин целиком?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Не берём полное ведение магазина, поставки и операционную работу. Делаем диагностику, аудит и внедрение: SEO, переработку карточек, ТЗ на визуал, оптимизацию внутренней рекламы."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Работаете за процент от роста?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Работаем по фиксированной стоимости, которую согласуем до начала."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Вы делаете съёмку?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Делаем переработку карточки под ключ: структура, обложка, смысловая галерея, тексты, ТЗ и дизайн. Отдельные слайды и баннеры не делаем."
+      }
+    }
   ]
 }
 </script>
@@ -69,11 +155,15 @@
       <a href="#funnel">Воронка</a>
       <a href="#services" data-nav="services">Услуги</a>
       <a href="#process">Как работаем</a>
-      <a href="cases.html" data-nav="cases">Кейсы</a>
       <a href="#faq">FAQ</a>
     </nav>
 
-    <a class="btn btn--ink header__cta" href="#lead">Получить аудит</a>
+    <a class="header__phone" href="tel:+74956422658">
+      <span class="header__phone-num">+7 (495) 642-26-58</span>
+      <span class="header__phone-note">Ответим в течение 15 минут, 10:00–22:00</span>
+    </a>
+
+    <a class="btn btn--ink header__cta" href="#lead">Обсудить задачу</a>
 
     <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Меню">
       <span></span><span></span><span></span>
@@ -85,12 +175,11 @@
   <a href="#funnel">Воронка</a>
   <a href="#services">Услуги</a>
   <a href="#process">Как работаем</a>
-  <a href="cases.html">Кейсы</a>
   <a href="#faq">FAQ</a>
-  <a class="drawer__cta" href="#lead">Получить аудит и план роста</a>
+  <a class="drawer__cta" href="#lead">Обсудить задачу</a>
   <div class="drawer__foot">
-    ОТВЕЧАЕМ В TELEGRAM И ПО ПОЧТЕ<br>
-    КОНТАКТЫ — В ПОДВАЛЕ САЙТА
+    <a class="drawer__phone" href="tel:+74956422658">+7 (495) 642-26-58</a>
+    <span>Ответим в течение 15 минут, 10:00–22:00</span>
   </div>
 </div>
 
@@ -107,7 +196,7 @@
       <p class="lead">Улучшаем рекламу и карточки на маркетплейсах. Показываем результат в цифрах, а не в обещаниях.</p>
 
       <div class="hero__actions">
-        <a class="btn btn--accent" href="#lead" data-intent="Аудит и план роста">Получить аудит и план роста</a>
+        <a class="btn btn--accent" href="#lead" data-intent="Первый экран">Обсудить задачу</a>
         <a class="btn btn--outline" href="#process">Как мы работаем</a>
       </div>
 
@@ -126,8 +215,8 @@
   <!-- --------------------------------------------------------- Бегущая -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee__track">
-      <div class="marquee__group"><span>ДИАГНОСТИКА ВОРОНКИ</span><span class="x">×</span><span>КАРТОЧКИ И SEO</span><span class="x">×</span><span>АУДИТ РЕКЛАМЫ</span><span class="x">×</span><span>КОНТЕНТ И ДИЗАЙН</span><span class="x">×</span><span>ПОКАЗАТЕЛИ ДО И ПОСЛЕ</span><span class="x">×</span></div>
-      <div class="marquee__group"><span>ДИАГНОСТИКА ВОРОНКИ</span><span class="x">×</span><span>КАРТОЧКИ И SEO</span><span class="x">×</span><span>АУДИТ РЕКЛАМЫ</span><span class="x">×</span><span>КОНТЕНТ И ДИЗАЙН</span><span class="x">×</span><span>ПОКАЗАТЕЛИ ДО И ПОСЛЕ</span><span class="x">×</span></div>
+      <div class="marquee__group"><span>ДИАГНОСТИКА ВОРОНКИ</span><span class="x">×</span><span>КАРТОЧКИ И SEO</span><span class="x">×</span><span>АУДИТ КАБИНЕТА</span><span class="x">×</span><span>ПЕРЕРАБОТКА КАРТОЧЕК</span><span class="x">×</span><span>ПОКАЗАТЕЛИ ДО И ПОСЛЕ</span><span class="x">×</span></div>
+      <div class="marquee__group"><span>ДИАГНОСТИКА ВОРОНКИ</span><span class="x">×</span><span>КАРТОЧКИ И SEO</span><span class="x">×</span><span>АУДИТ КАБИНЕТА</span><span class="x">×</span><span>ПЕРЕРАБОТКА КАРТОЧЕК</span><span class="x">×</span><span>ПОКАЗАТЕЛИ ДО И ПОСЛЕ</span><span class="x">×</span></div>
     </div>
   </div>
 
@@ -199,25 +288,40 @@
         <p class="eyebrow">02 — Услуги</p>
         <h2 class="h2">Услуги по <span class="accent">задачам</span></h2>
       </div>
-      <p class="section-head__note">Можно начать с диагностики или сразу взять конкретную задачу — если уже понятно, что нужно.</p>
+      <p class="section-head__note">Можно начать с диагностики одной карточки, с аудита всего кабинета или сразу взять конкретную задачу.</p>
     </div>
 
     <div class="grid-hair" data-stagger="90">
       <a class="service" href="service-diagnostika.html">
         <div class="service__num">01</div>
-        <h3 class="service__title">Диагностика воронки</h3>
-        <p>Находим, где теряются продажи, и определяем, с чего начать.</p>
+        <h3 class="service__title">Диагностика контентной воронки</h3>
+        <p>Когда вопрос в конкретных карточках: находим, на каком этапе карточка теряет покупателей и что исправить первым.</p>
         <ul class="service__list">
-          <li>Аудит кабинета</li>
-          <li>Анализ воронки по товарам</li>
-          <li>Поиск причин потерь</li>
-          <li>План действий с приоритетами</li>
+          <li>Воронка карточки: показы, переходы, корзина, заказы, выкупы</li>
+          <li>Поисковая видимость и пробелы в SEO</li>
+          <li>Обложка, слайды, ответы на вопросы покупателей</li>
+          <li>Отзывы и конкуренты</li>
+        </ul>
+        <span class="service__scope">Одна площадка, одна категория, до 5 однотипных SKU</span>
+        <span class="service__more">Подробнее →</span>
+      </a>
+
+      <a class="service" href="service-audit.html">
+        <div class="service__num">02</div>
+        <h3 class="service__title">Комплексный аудит кабинета</h3>
+        <p>Системные потери в продажах, рекламе, SEO и контенте по нескольким товарам или категории.</p>
+        <ul class="service__list">
+          <li>Структура продаж и приоритетные SKU</li>
+          <li>Воронка по товарам и группам</li>
+          <li>Внутренняя реклама: расходы, ДРР, запросы</li>
+          <li>Карточки, отзывы, конкуренты</li>
+          <li>Юнит-экономика — при наличии данных</li>
         </ul>
         <span class="service__more">Подробнее →</span>
       </a>
 
       <a class="service" href="service-kartochki-seo.html">
-        <div class="service__num">02</div>
+        <div class="service__num">03</div>
         <h3 class="service__title">Карточки и SEO</h3>
         <p>Поисковая видимость и соответствие карточки запросу.</p>
         <ul class="service__list">
@@ -229,32 +333,22 @@
         <span class="service__more">Подробнее →</span>
       </a>
 
-      <a class="service" href="service-reklama.html">
-        <div class="service__num">03</div>
-        <h3 class="service__title">Реклама</h3>
-        <p>Целевой трафик и эффективность рекламных расходов.</p>
-        <ul class="service__list">
-          <li>Аудит кампаний</li>
-          <li>Запуск рекламы</li>
-          <li>Оптимизация ставок и бюджетов</li>
-          <li>Оценка результатов по товарам</li>
-        </ul>
-        <span class="service__more">Подробнее →</span>
-      </a>
-
-      <a class="service service--dark" href="service-kontent.html">
+      <a class="service service--dark" href="service-pererabotka.html">
         <div class="service__num">04</div>
-        <h3 class="service__title">Контент-стратегия и дизайн</h3>
-        <p>CTR, добавления в корзину и восприятие бренда.</p>
+        <h3 class="service__title">Переработка карточки под ключ</h3>
+        <p>Карточка как система: поиск, контент и аргументы для покупателя, а не «красивая инфографика».</p>
         <ul class="service__list">
-          <li>Анализ аудитории и УТП</li>
-          <li>Визуальная концепция</li>
-          <li>Дизайн карточек и rich-контент</li>
-          <li>Витрины</li>
+          <li>Структура карточки и обложка</li>
+          <li>Смысловая галерея и тексты</li>
+          <li>Техническое задание и дизайн</li>
+          <li>Подготовка материалов к размещению</li>
         </ul>
+        <span class="service__scope">Минимальный заказ — одна карточка под ключ</span>
         <span class="service__more">Подробнее →</span>
       </a>
     </div>
+
+    <p class="services__after" data-reveal="up">После диагностики или аудита — проект внедрения: SEO-оптимизация, переработка карточек, ТЗ на визуал, оптимизация внутренней рекламы. Стоимость рассчитываем по итогам анализа.</p>
   </section>
 
   <!-- ------------------------------------------------------- Как работаем -->
@@ -284,11 +378,41 @@
     </ol>
   </section>
 
+  <!-- ------------------------------------------------ Опыт и специализация -->
+  <section class="wrap section" id="experience">
+    <div class="xp">
+      <div class="xp__main" data-reveal="up">
+        <p class="eyebrow">04 — Опыт и специализация</p>
+        <h2 class="h2">Более 7 лет<br>в e-commerce <span class="accent">и FMCG</span></h2>
+        <ul class="xp__cats" aria-label="Категории">
+          <li>Косметика и уход</li>
+          <li>БАДы</li>
+          <li>Бытовая химия</li>
+          <li>Личная гигиена</li>
+          <li>Медицинские изделия</li>
+        </ul>
+        <p class="lead">Опыт работы с Ozon и Wildberries — от аналитики воронки и SEO до визуальной коммуникации, внутренней рекламы и управления контентным производством.</p>
+        <p class="xp__note">Под задачи проекта подключаем профильных специалистов по аналитике, SEO, рекламе и дизайну.</p>
+      </div>
+
+      <aside class="notfit" data-reveal="up" aria-labelledby="notfit-title">
+        <h3 class="notfit__title" id="notfit-title">Кому мы не подойдём</h3>
+        <ul class="notfit__list">
+          <li>Нужна только «красивая инфографика» или один слайд без аналитики</li>
+          <li>Ждёте гарантированного роста продаж до анализа данных</li>
+          <li>Ищете полное ведение магазина и поставок</li>
+          <li>Готовы работать только за процент</li>
+          <li>Продаж и данных пока нет</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
   <!-- --------------------------------------------------- Что вы получаете -->
   <section class="wrap section" id="report">
     <div class="section-head" data-reveal="up">
       <div>
-        <p class="eyebrow">04 — Что вы получаете</p>
+        <p class="eyebrow">05 — Что вы получаете</p>
         <h2 class="h2">Ясность, приоритеты,<br><span class="accent">план действий</span></h2>
       </div>
       <p class="section-head__note">Итог аудита — документ, с которым можно работать сразу. Ниже — обезличенный образец трёх его разделов.</p>
@@ -367,7 +491,7 @@
   <section class="wrap section" id="before-after">
     <div class="section-head" data-reveal="up">
       <div>
-        <p class="eyebrow">05 — Карточка до и после</p>
+        <p class="eyebrow">06 — Карточка до и после</p>
         <h2 class="h2">Не «стало красивее»,<br>а решает <span class="accent">задачу</span></h2>
       </div>
       <p class="section-head__note">Оценку визуала даём по показателям карточки — CTR и конверсии в корзину, — а не по впечатлению.</p>
@@ -407,11 +531,8 @@
         </li>
         <li>
           <span class="ba-list__n">03</span>
-          <h3>Результат</h3>
-          <div class="ba-result">
-            <div><span class="mono mono--xs">CTR</span><b>5,8% <i>→</i> <em>7,1%</em></b></div>
-            <div><span class="mono mono--xs">Конверсия в корзину</span><b>8,2% <i>→</i> <em>10,4%</em></b></div>
-          </div>
+          <h3>Как проверяем результат</h3>
+          <p>Сравниваем CTR и конверсию в корзину за одинаковые периоды до и после, учитывая цену, рекламу, акции и остатки.</p>
         </li>
       </ol>
     </div>
@@ -432,8 +553,15 @@
             <div class="field__error">Нужен e-mail или Telegram</div>
           </div>
           <button class="btn btn--accent" type="submit">Получить чек-лист</button>
+          <div class="field field--consent field--consent-light">
+            <label class="consent">
+              <input type="checkbox" name="consent" value="да" required>
+              <span class="consent__box" aria-hidden="true"></span>
+              <span class="consent__text">Даю согласие на обработку персональных данных в соответствии с <a href="privacy.html">политикой конфиденциальности</a></span>
+            </label>
+            <div class="field__error">Нужно согласие на обработку данных</div>
+          </div>
           <div class="form__status">Отправили. Если захотите разобрать результат — ответьте на письмо.</div>
-          <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой обработки персональных данных</a>.</p>
         </form>
       </div>
 
@@ -450,68 +578,118 @@
   <section class="wrap section" id="faq">
     <div class="faq-layout">
       <div data-reveal="up">
-        <p class="eyebrow">06 — FAQ</p>
+        <p class="eyebrow">07 — FAQ</p>
         <h2 class="h2">Честные <span class="accent">ответы</span></h2>
       </div>
 
       <div class="faq" data-stagger="60">
         <div class="faq__item">
           <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-1">
-            С какого объёма есть смысл работать?
+            Первая встреча платная?
             <span class="faq__sign" aria-hidden="true">+</span>
           </button>
           <div class="faq__panel" id="faq-1" aria-hidden="true">
-            <div><p>Порога нет: смотрим на задачу и объём работ. Точечные задачи берём от определённого объёма — обсудим на созвоне.</p></div>
+            <div><p>Нет. За 30–40 минут уточняем задачу, вместе смотрим 1–2 карточки, называем 2–3 наблюдения и определяем, нужен ли аудит и что в него войдёт. Это не аудит: письменного отчёта и плана внедрения на встрече нет.</p></div>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-2">
-            Когда будет результат?
+            С какого объёма есть смысл работать?
             <span class="faq__sign" aria-hidden="true">+</span>
           </button>
           <div class="faq__panel" id="faq-2" aria-hidden="true">
-            <div><p>Первые изменения в трафике видны после обновления контента и семантики. Устойчивый эффект оцениваем по данным, а не обещаем заранее.</p></div>
+            <div><p>Публичного порога нет. Важнее, чтобы у вас уже были продажи и данные за несколько месяцев, бюджет и возможность внедрять изменения. Минимальная задача — одна карточка под ключ.</p></div>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-3">
-            Вы гарантируете рост продаж?
+            Сколько стоит?
             <span class="faq__sign" aria-hidden="true">+</span>
           </button>
           <div class="faq__panel" id="faq-3" aria-hidden="true">
-            <div><p>Нет. На продажи влияют цена, остатки, ассортимент и решения площадки. Мы отвечаем за работы и за проверку их эффекта.</p></div>
+            <div><p>Стоимость зависит от числа площадок, категорий, товаров и состава работ. Рассчитываем и фиксируем цену до начала проекта. Цена диагностики контентной воронки — <a href="service-diagnostika.html">на её странице</a>.</p></div>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-4">
-            Что нужно от нас?
+            Чем ваша диагностика отличается от бесплатного аудита в сервисах?
             <span class="faq__sign" aria-hidden="true">+</span>
           </button>
           <div class="faq__panel" id="faq-4" aria-hidden="true">
-            <div><p>Доступ в кабинет, ретро-данные, ответственный за согласования и поддержание наличия товара.</p></div>
+            <div><p>Автоматический отчёт показывает показатели. Мы связываем их по всей воронке, проверяем причины с учётом цены, остатков и рекламы и даём план: что исправить первым и как измерить результат. По каждой проблеме — что происходит, чем подтверждается, на что влияет, что исправить.</p></div>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-5">
-            Вы делаете съёмку?
+            Когда будет результат?
             <span class="faq__sign" aria-hidden="true">+</span>
           </button>
           <div class="faq__panel" id="faq-5" aria-hidden="true">
-            <div><p>Сейчас — дизайн карточек, инфографику и rich-контент. Съёмка не входит.</p></div>
+            <div><p>Сроки работ называем и фиксируем до начала — после оценки площадок, числа товаров и данных. Эффект изменений проверяем по цифрам за одинаковые периоды до и после. Сроки роста продаж не обещаем: на них влияют цена, остатки и решения площадки.</p></div>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-6">
-            Как вы показываете результат?
+            Вы гарантируете рост продаж?
             <span class="faq__sign" aria-hidden="true">+</span>
           </button>
           <div class="faq__panel" id="faq-6" aria-hidden="true">
+            <div><p>Нет. На продажи влияют цена, остатки, ассортимент и решения площадки. Мы отвечаем за работы и за проверку их эффекта.</p></div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-7">
+            Как вы показываете результат?
+            <span class="faq__sign" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__panel" id="faq-7" aria-hidden="true">
             <div><p>Фиксируем показатели до изменений и сравниваем после, отделяя эффект работ от цены, остатков и условий площадки.</p></div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-8">
+            Что нужно от нас?
+            <span class="faq__sign" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__panel" id="faq-8" aria-hidden="true">
+            <div><p>Для первой встречи — ссылка на магазин, 2–3 карточки и пара слов о задаче. Для аудита — доступ к кабинету с правами на просмотр или выгрузки: воронка по товарам, заказы и выкупы, реклама, остатки, история цен и акций. Для расчёта прибыльности — ещё себестоимость, комиссии и логистика.</p></div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-9">
+            Вы ведёте магазин целиком?
+            <span class="faq__sign" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__panel" id="faq-9" aria-hidden="true">
+            <div><p>Нет. Не берём полное ведение магазина, поставки и операционную работу. Делаем диагностику, аудит и внедрение: SEO, переработку карточек, ТЗ на визуал, оптимизацию внутренней рекламы.</p></div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-10">
+            Работаете за процент от роста?
+            <span class="faq__sign" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__panel" id="faq-10" aria-hidden="true">
+            <div><p>Нет. Работаем по фиксированной стоимости, которую согласуем до начала.</p></div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-11">
+            Вы делаете съёмку?
+            <span class="faq__sign" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__panel" id="faq-11" aria-hidden="true">
+            <div><p>Нет. Делаем переработку карточки под ключ: структура, обложка, смысловая галерея, тексты, ТЗ и дизайн. Отдельные слайды и баннеры не делаем.</p></div>
           </div>
         </div>
       </div>
@@ -522,27 +700,29 @@
   <section class="form-band" id="lead" data-reveal="fade">
     <div class="wrap form-layout">
       <div>
-        <p class="eyebrow eyebrow--light">07 — Заявка на аудит</p>
-        <h2 class="h2 h2--lead">Разберём ваш <span class="accent">кабинет</span></h2>
-        <p class="lead lead--light lead--narrow">Расскажите, что происходит с продажами. На созвоне зададим уточняющие вопросы и определим, с чего начинать разбор.</p>
+        <p class="eyebrow eyebrow--light">08 — Заявка</p>
+        <h2 class="h2 h2--lead">Обсудим вашу <span class="accent">задачу</span></h2>
+        <p class="lead lead--light lead--narrow">Расскажите, что происходит с продажами. Менеджер свяжется с вами, уточнит задачу и назначит встречу с экспертом.</p>
 
         <ol class="after-lead">
           <li>
             <span class="after-lead__n">01</span>
-            <h3>Короткий созвон</h3>
-            <p>Говорите со специалистом, который будет делать разбор, — не с менеджером по продажам.</p>
+            <h3>Связываемся</h3>
+            <p>Уточняем площадку, категорию и задачу, назначаем встречу.</p>
           </li>
           <li>
             <span class="after-lead__n">02</span>
-            <h3>Что подготовить</h3>
-            <p>Доступ к кабинету и ретро-данные по продажам, рекламе и остаткам.</p>
+            <h3>Встреча с экспертом, 30–40 минут, бесплатно</h3>
+            <p>Смотрим 1–2 карточки, называем 2–3 наблюдения и определяем, нужен ли аудит и что в него войдёт.</p>
           </li>
           <li>
             <span class="after-lead__n">03</span>
-            <h3>Итог первой встречи</h3>
-            <p>Список участков, которые стоит проверить, и состав аудита под ваш кабинет.</p>
+            <h3>Что подготовить</h3>
+            <p>Ссылку на магазин, 2–3 главные карточки и пару слов о задаче. Доступ к кабинету для встречи не нужен.</p>
           </li>
         </ol>
+
+        <a class="lead-phone" href="tel:+74956422658"><span class="mono mono--xs">Или позвоните</span>+7 (495) 642-26-58</a>
       </div>
 
       <form class="form" data-form="lead" novalidate>
@@ -555,8 +735,14 @@
 
         <div class="field">
           <label for="lead-contact">Контакт</label>
-          <input id="lead-contact" name="contact" type="text" placeholder="Телефон, e-mail или Telegram" required data-validate="contact" autocomplete="email">
+          <input id="lead-contact" name="contact" type="text" placeholder="Телефон, e-mail или Telegram" required data-validate="contact" autocomplete="tel">
           <div class="field__error">Нужен телефон, e-mail или Telegram</div>
+        </div>
+
+        <div class="field">
+          <label for="lead-shop">Ссылка на магазин или карточку</label>
+          <input id="lead-shop" name="shop_url" type="text" inputmode="url" placeholder="wildberries.ru/… или ozon.ru/…" required data-validate="url" autocomplete="url">
+          <div class="field__error">Нужна ссылка на магазин или карточку</div>
         </div>
 
         <fieldset class="fieldset">
@@ -571,7 +757,31 @@
 
         <div class="field">
           <label for="lead-cat">Категория товара</label>
-          <input id="lead-cat" name="category" type="text" placeholder="Например, уходовая косметика">
+          <select id="lead-cat" name="category" data-other-target="lead-cat-other">
+            <option value="">Выберите категорию</option>
+            <option value="Косметика и уход">Косметика и уход</option>
+            <option value="БАДы">БАДы</option>
+            <option value="Бытовая химия">Бытовая химия</option>
+            <option value="Личная гигиена">Личная гигиена</option>
+            <option value="Медицинские изделия">Медицинские изделия</option>
+            <option value="Другое">Другое</option>
+          </select>
+        </div>
+
+        <div class="field" data-other-field="lead-cat-other">
+          <label for="lead-cat-other">Какая категория</label>
+          <input id="lead-cat-other" name="category_other" type="text" placeholder="Например, товары для дома">
+        </div>
+
+        <div class="field">
+          <label for="lead-volume">Объём продаж в месяц · необязательно</label>
+          <select id="lead-volume" name="volume">
+            <option value="">Не указывать</option>
+            <option value="до 500 тыс. ₽">до 500 тыс. ₽</option>
+            <option value="0,5–2 млн ₽">0,5–2 млн ₽</option>
+            <option value="2–5 млн ₽">2–5 млн ₽</option>
+            <option value="больше 5 млн ₽">больше 5 млн ₽</option>
+          </select>
         </div>
 
         <div class="field">
@@ -579,16 +789,18 @@
           <textarea id="lead-task" name="task" rows="3" placeholder="Что происходит с продажами"></textarea>
         </div>
 
-        <div class="field">
-          <label for="lead-volume">Объём продаж · необязательно</label>
-          <input id="lead-volume" name="volume" type="text" placeholder="Поможет точнее оценить объём работ">
+        <div class="field field--consent">
+          <label class="consent">
+            <input type="checkbox" name="consent" value="да" required>
+            <span class="consent__box" aria-hidden="true"></span>
+            <span class="consent__text">Даю согласие на обработку персональных данных в соответствии с <a href="privacy.html">политикой конфиденциальности</a></span>
+          </label>
+          <div class="field__error">Нужно согласие на обработку данных</div>
         </div>
 
         <button class="btn btn--light" type="submit">Отправить заявку</button>
 
-        <div class="form__status">Заявка отправлена. Свяжемся с вами и зададим несколько уточняющих вопросов.</div>
-
-        <p class="form__note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой обработки персональных данных</a>.</p>
+        <div class="form__status">Заявка отправлена. Свяжемся с вами в течение 15 минут в рабочее время (10:00–22:00), в другое время — до 10:00 следующего дня.</div>
       </form>
     </div>
   </section>
@@ -605,25 +817,24 @@
 
     <div class="footer__col">
       <div class="mono mono--xs">Услуги</div>
-      <a href="service-diagnostika.html">Диагностика воронки</a>
+      <a href="service-diagnostika.html">Диагностика контентной воронки</a>
+      <a href="service-audit.html">Комплексный аудит</a>
       <a href="service-kartochki-seo.html">Карточки и SEO</a>
-      <a href="service-reklama.html">Реклама</a>
-      <a href="service-kontent.html">Контент-стратегия и дизайн</a>
+      <a href="service-pererabotka.html">Переработка карточки под ключ</a>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Агентство</div>
       <a href="index.html#process">Как работаем</a>
       <a href="index.html#report">Образец отчёта</a>
-      <a href="cases.html">Кейсы</a>
-      <a href="index.html#faq">Вопросы и ответы</a>
+          <a href="index.html#faq">Вопросы и ответы</a>
     </div>
 
     <div class="footer__col">
       <div class="mono mono--xs">Контакты</div>
-      <!-- Заменить на реальные контакты агентства -->
-      <span class="pending">[Почта — от заказчика]</span>
-      <span class="pending">[Telegram — от заказчика]</span>
+      <a href="tel:+74956422658">+7 (495) 642-26-58</a>
+      <span class="footer__hours">Ответим в течение 15 минут, 10:00–22:00</span>
+      <!-- Почта на домене, Telegram и MAX — добавить после создания -->
       <a class="link-mono" href="index.html#lead">Оставить заявку →</a>
     </div>
   </div>

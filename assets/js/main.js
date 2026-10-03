@@ -341,14 +341,53 @@
     });
   })();
 
+  /* --------------------------------- 9a. Метки рекламы для таблицы лидов */
+  // utm_* и yclid берём из адреса и запоминаем: человек может прийти по
+  // рекламе, походить по страницам и оставить заявку не на посадочной.
+  // ClientID Метрики — из её cookie _ym_uid, появится после установки счётчика.
+  var TRACK_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'yclid'];
+
+  function readTracking() {
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem('km_track') || '{}'); } catch (e) { saved = {}; }
+    var params = new URLSearchParams(window.location.search);
+    var fresh = {};
+    TRACK_KEYS.forEach(function (k) { if (params.get(k)) fresh[k] = params.get(k); });
+    if (Object.keys(fresh).length) {              // новый рекламный переход — перезаписываем
+      saved = fresh;
+      try { localStorage.setItem('km_track', JSON.stringify(saved)); } catch (e) { /* приватный режим */ }
+    }
+    var ym = document.cookie.match(/(?:^|;\s*)_ym_uid=(\d+)/);
+    saved.ym_client_id = ym ? ym[1] : '';
+    return saved;
+  }
+
+  function fillTracking(form) {
+    var data = readTracking();
+    TRACK_KEYS.concat('ym_client_id').forEach(function (k) {
+      var input = form.querySelector('input[type=hidden][name="' + k + '"]');
+      if (!input) {
+        input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = k;
+        form.appendChild(input);
+      }
+      input.value = data[k] || '';
+    });
+  }
+
+  document.querySelectorAll('form[data-form]').forEach(fillTracking);
+
   /* ------------------------------------------------------- 10. Формы заявки */
   (function forms() {
     var forms = document.querySelectorAll('form[data-form]');
     if (!forms.length) return;
 
+    var CONTROLS = 'input:not([type=hidden]), textarea, select';
+
     function fail(field, message) {
       field.classList.add('has-error');
-      var input = field.querySelector('input, textarea');
+      var input = field.querySelector(CONTROLS);
       if (input) input.setAttribute('aria-invalid', 'true');
       var error = field.querySelector('.field__error');
       if (error && message) error.textContent = message;
@@ -356,40 +395,47 @@
 
     function clear(field) {
       field.classList.remove('has-error');
-      var input = field.querySelector('input, textarea');
+      var input = field.querySelector(CONTROLS);
       if (input) input.removeAttribute('aria-invalid');
     }
 
     function validate(form) {
-      var ok = true;
       var firstBad = null;
 
       form.querySelectorAll('.field').forEach(function (field) {
-        var input = field.querySelector('input[required], textarea[required]');
+        var input = field.querySelector('[required]');
         if (!input) return;
 
         clear(field);
-        var value = input.value.trim();
+        var bad = false;
 
-        if (!value) {
-          fail(field, 'Заполните поле');
-          ok = false;
-        } else if (input.dataset.validate === 'contact' && !isContact(value)) {
-          fail(field, 'Нужен телефон или e-mail');
-          ok = false;
+        if (input.type === 'checkbox') {
+          bad = !input.checked;                               // текст ошибки — из разметки
+          if (bad) fail(field, null);
+        } else {
+          var value = input.value.trim();
+          if (!value) { bad = true; fail(field, 'Заполните поле'); }
+          else if (input.dataset.validate === 'contact' && !isContact(value)) { bad = true; fail(field, 'Нужен телефон, e-mail или Telegram'); }
+          else if (input.dataset.validate === 'url' && !isUrl(value)) { bad = true; fail(field, 'Нужна ссылка на магазин или карточку'); }
         }
 
-        if (!ok && !firstBad) firstBad = input;
+        if (bad && !firstBad) firstBad = input;
       });
 
       if (firstBad) firstBad.focus();
-      return ok;
+      return !firstBad;
     }
 
     function isContact(value) {
       var email = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
       var phone = value.replace(/[^\d]/g, '').length >= 10;
-      return email || phone;
+      var telegram = /^@[\w\d_]{4,}$/.test(value) || /t\.me\/[\w\d_]{4,}/.test(value);
+      return email || phone || telegram;
+    }
+
+    // Ссылка без протокола тоже годится: «wildberries.ru/catalog/…»
+    function isUrl(value) {
+      return /^(https?:\/\/)?[^\s.\/]+(\.[^\s.\/]+)+(\/\S*)?$/i.test(value);
     }
 
     forms.forEach(function (form) {
@@ -410,6 +456,7 @@
         //   fetch('/api/lead', { method: 'POST', body: new FormData(form) })
         // Пока форма работает в демо-режиме: показываем подтверждение.
         // ──────────────────────────────────────────────────────────────────
+        fillTracking(form);
         var data = Object.fromEntries(new FormData(form).entries());
         console.info('[Креаметрика] заявка:', data);
 
@@ -425,7 +472,33 @@
         document.querySelectorAll('.choice').forEach(function (label) {
           label.classList.remove('is-checked');
         });
+        form.querySelectorAll('[data-other-target]').forEach(function (sel) {
+          sel.dispatchEvent(new Event('change', { bubbles: true }));
+        });
       });
+    });
+  })();
+
+  /* ------------------------------------------ 10a. «Другое» в категории товара */
+  (function otherCategory() {
+    document.querySelectorAll('[data-other-target]').forEach(function (select) {
+      var field = document.querySelector('[data-other-field="' + select.dataset.otherTarget + '"]');
+      if (!field) return;
+      function sync() {
+        var on = select.value === 'Другое';
+        field.hidden = !on;
+        if (!on) field.querySelector('input').value = '';
+      }
+      select.addEventListener('change', sync);
+      sync();   // без JS поле видно всегда, с JS — только при выборе «Другое»
+    });
+
+    // Пока в списке ничего не выбрано, подсказка серая, как плейсхолдер у полей
+    document.querySelectorAll('form[data-form] select').forEach(function (select) {
+      function mark() { select.classList.toggle('is-empty', !select.value); }
+      select.addEventListener('change', mark);
+      select.form && select.form.addEventListener('reset', function () { setTimeout(mark, 0); });
+      mark();
     });
   })();
 
