@@ -30,6 +30,7 @@
     main{row-gap:24px}.intro{align-self:end}.card{grid-column:2;grid-row:1 / 3;align-self:center}.details{grid-column:1;grid-row:2}.details .directions{margin-top:0}.details .experience{margin-top:16px}@media(max-width:849px){main{display:flex;flex-direction:column;gap:24px;align-items:stretch}.intro{align-self:stretch}.details{padding:0 4px}.details .directions{padding-top:20px}.top{margin-bottom:24px}h1{font-size:40px}.card{align-self:stretch}.experience{margin-top:14px}}
     @media(max-width:370px){h1{font-size:32px}}
     [hidden]{display:none!important}
+    .tag{display:inline-flex;align-items:center;gap:7px;min-height:44px;transition:border-color .2s,background .2s}.tag .arrow{width:13px;height:13px}.tag:hover{border-color:var(--red);background:#241311;color:#fff}.foot a{display:inline-flex;align-items:center;gap:5px;min-height:44px}.foot .arrow{width:13px;height:13px}.contact-row>.arrow{width:20px;height:20px}.avatar{flex-shrink:0}
   </style>
 </head>
 <body>
@@ -55,17 +56,17 @@
       <a class="button primary" href="tel:+79856004604"><svg aria-hidden="true"><use href="#i-phone"/></svg>+7 985 600-46-04</a>
       <div class="messengers"><a class="button secondary" href="https://t.me/+79856004604" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tg"/></svg>Telegram</a><a class="button secondary" href="https://wa.me/79856004604" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a></div>
       <a class="contact-row" href="tel:+74956422658"><span><small>Дополнительный · для звонков</small>+7 495 642-26-58</span><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
-      <a class="contact-row" href="mailto:creametrica@yandex.ru"><span>creametrica@yandex.ru</span><span class="arrow" aria-hidden="true">↗</span></a>
-      <a class="contact-row site-row" href="./"><span><small>Больше об агентстве</small><strong>Наш сайт</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+      <a class="contact-row" href="mailto:creametrica@yandex.ru"><span>creametrica@yandex.ru</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+      <a class="contact-row site-row" href="./"><span><small>Больше об агентстве</small><strong>Наш сайт</strong></span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
       <a class="button save" id="save-contact" download="Креаметрика.vcf" href="#"><svg aria-hidden="true"><use href="#i-save"/></svg>Сохранить контакт</a>
       <button class="button share" id="open-share" type="button" aria-haspopup="dialog"><svg aria-hidden="true"><use href="#i-qr"/></svg>Передать знакомство · QR</button>
     </section>
     <section class="details" aria-label="Об агентстве">
-      <div class="directions" aria-label="Направления работы"><span class="tag">Маркетплейсы и e-commerce</span><span class="tag">Контекстная реклама</span><span class="tag">Сайты любой сложности</span><span class="tag">ИИ-автоматизация</span><span class="tag">Telegram-боты</span></div>
+      <div class="directions" aria-label="Направления работы"><a class="tag" href="./">Маркетплейсы и e-commerce<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="tag" href="service-direct.html">Контекстная реклама<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="tag" href="service-web.html">Сайты любой сложности<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="tag" href="service-ai.html">ИИ-автоматизация<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="tag" href="service-bots.html">Telegram-боты<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
       <p class="experience"><strong>Опыт в beauty и косметике.</strong><br>Кейсы — по запросу. Обсудим и вашу задачу.</p>
     </section>
   </main>
-  <footer class="foot"><span>КРЕАМЕТРИКА © <span id="year">2026</span></span><a href="mailto:creametrica@yandex.ru">От знакомства — к делу ↗</a></footer>
+  <footer class="foot"><span>КРЕАМЕТРИКА © <span id="year">2026</span></span><a href="mailto:creametrica@yandex.ru">От знакомства — к делу <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></footer>
 </div>
 <dialog id="share-dialog" aria-labelledby="share-title">
   <button class="close" id="close-share" aria-label="Закрыть" type="button">×</button>
