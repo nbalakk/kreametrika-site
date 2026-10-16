@@ -1,38 +1,114 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nbalakk.github.io/kreametrika-site/</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nbalakk.github.io/kreametrika-site/service-diagnostika.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.9</priority>
+    <loc>https://nbalakk.github.io/kreametrika-site/card-en.html</loc>
   </url>
   <url>
-    <loc>https://nbalakk.github.io/kreametrika-site/service-audit.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.9</priority>
+    <loc>https://nbalakk.github.io/kreametrika-site/card-ko.html</loc>
   </url>
   <url>
-    <loc>https://nbalakk.github.io/kreametrika-site/service-kartochki-seo.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.8</priority>
+    <loc>https://nbalakk.github.io/kreametrika-site/card-tr.html</loc>
   </url>
   <url>
-    <loc>https://nbalakk.github.io/kreametrika-site/service-pererabotka.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.8</priority>
+    <loc>https://nbalakk.github.io/kreametrika-site/card-zh.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/card.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/checklist.html</loc>
   </url>
   <url>
     <loc>https://nbalakk.github.io/kreametrika-site/contacts.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nbalakk.github.io/kreametrika-site/privacy.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.2</priority>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-ai-en.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-ai-ko.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-ai-tr.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-ai-zh.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-ai.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-audit.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-bots-en.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-bots-ko.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-bots-tr.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-bots-zh.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-bots.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-diagnostika.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-direct-en.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-direct-ko.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-direct-tr.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-direct-zh.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-direct.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-kartochki-seo.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-marketplaces-en.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-marketplaces-ko.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-marketplaces-tr.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-marketplaces-zh.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-marketplaces.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-pererabotka.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-web-en.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-web-ko.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-web-tr.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-web-zh.html</loc>
+  </url>
+  <url>
+    <loc>https://nbalakk.github.io/kreametrika-site/service-web.html</loc>
   </url>
 </urlset>

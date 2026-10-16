@@ -2164,3 +2164,31 @@ select { font: inherit; color: inherit; }
 .intro > * { opacity: 1 !important; transform: none !important; clip-path: none !important; }
   .line > span { transform: none !important; }
 }
+
+/* Direct contacts while lead processing is on hold. */
+.contact-options { display: grid; align-content: start; gap: 20px; }
+.contact-options h3 { font-family: var(--font-display, Manrope, sans-serif); font-size: clamp(24px, 3vw, 36px); line-height: 1.15; }
+.contact-options .btn--outline { border-color: currentColor; color: inherit; }
+.contact-options .lead-phone { margin-top: 0; }
+
+/* Local review: product scope, honest result cards and direct contacts. */
+.contact-arrow { display: inline-block; width: 18px; height: 18px; flex: 0 0 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
+.contact-options { min-width: 0; gap: 18px; }
+.contact-options h3 { margin: 0; font-size: clamp(24px, 2.6vw, 34px); }
+.contact-options p { margin: 0; line-height: 1.65; }
+.contact-options .btn { width: 100%; min-height: 48px; justify-content: space-between; gap: 12px; }
+.contact-options .btn--light:hover { background: var(--paper); color: var(--ink); }
+.contact-options .btn--outline:hover { color: var(--white); background: #ffffff12; border-color: currentColor; }
+.contact-options .contact-options__note { font-size: 13px; color: var(--dim-2); }
+.contact-options .lead-phone { min-height: 44px; display: flex; align-items: center; }
+.experience-compact .h2 { font-size: clamp(30px, 4vw, 48px); }
+.experience-compact .lead { font-size: 18px; margin-top: 18px; }
+.experience-compact .xp__note { margin-top: 15px; }
+.format-guide { border-top: 3px solid var(--accent); padding: 24px 0 0; }
+.format-guide h3 { margin: 0 0 16px; font-family: var(--font-display); font-size: 20px; }
+.format-guide ul { list-style: none; margin: 0; padding: 0; }
+.format-guide li { padding: 13px 0; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.65; color: var(--ink-soft); }
+#report .sheet__paper { aspect-ratio: auto; min-height: 260px; gap: 12px; }
+#report .sheet__text { margin-top: 0; line-height: 1.7; }
+.info__value { overflow-wrap: anywhere; }
+@media (max-width: 600px) { .contact-options { gap: 17px; } .contact-options .btn { font-size: 12px; padding: 15px 16px; } #report .sheet__paper { min-height: 220px; } }

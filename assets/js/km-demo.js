@@ -142,7 +142,7 @@ const css = `
 
 const html = `
 <div class="panel"><div class="inner">
-  <div class="top"><span class="lft"><b>КРЕАМЕТРИКА</b> — РАЗБОР</span><span>ПРИМЕР РАЗБОРА · ДАННЫЕ УСЛОВНЫЕ</span></div>
+  <div class="top"><span class="lft"><b>КРЕАМЕТРИКА</b> — РАЗБОР</span><span>СХЕМА ПОДХОДА · ДАННЫЕ УСЛОВНЫЕ</span></div>
   <div class="stage">
     <div class="s-tile fx"><div class="tile"><div class="t1">Кабинет селлера</div><div class="t2">WB · OZON</div><div class="t3"><span>8 ТОВАРОВ</span><span>ОТКРЫТЬ →</span></div></div></div>
     <div class="s-grid fx">
@@ -157,7 +157,7 @@ const html = `
       <div class="fb">
         <div class="fl">
           ${FUN.map(f => `<div class="row fx L"><div class="trk"><div class="bar"></div>${f.hot ? '<div class="hotb"></div>' : ''}<span class="lb">${f.l}</span>${f.hot ? '<span class="cap">ЗДЕСЬ ТЕРЯЕТСЯ<br>БОЛЬШЕ ВСЕГО</span>' : ''}</div><div class="val">0,0</div></div>`).join('')}
-          <div class="rsn"><div class="rh fx L">ПРИЧИНЫ ПОТЕРЬ</div>
+          <div class="rsn"><div class="rh fx L">ГИПОТЕЗЫ ДЛЯ ПРОВЕРКИ</div>
             ${REASONS.map((r, i) => `<div class="rs fx L"><em>0${i + 1}</em><span>${r}</span></div>`).join('')}</div>
         </div>
         <div class="fr fx L">

@@ -451,30 +451,14 @@
         e.preventDefault();
         if (!validate(form)) return;
 
-        // ─── Точка подключения бэкенда ────────────────────────────────────
-        // Здесь отправляем данные в CRM / на почту / в Telegram-бот:
-        //   fetch('/api/lead', { method: 'POST', body: new FormData(form) })
-        // Пока форма работает в демо-режиме: показываем подтверждение.
-        // ──────────────────────────────────────────────────────────────────
-        fillTracking(form);
-        var data = Object.fromEntries(new FormData(form).entries());
-        console.info('[Креаметрика] заявка:', data);
-
-        if (submit) {
-          submit.disabled = true;
-          submit.textContent = 'Отправлено';
-        }
+        // Онлайн-отправка отключена до подключения реальной доставки.
+        // Не логируем личные данные и не показываем ложный успех.
         if (status) {
+          status.textContent = 'Онлайн-отправка пока недоступна. Напишите на creametrica@yandex.ru или позвоните +7 985 600-46-04.';
           status.classList.add('is-visible');
           status.setAttribute('role', 'status');
         }
-        form.reset();
-        document.querySelectorAll('.choice').forEach(function (label) {
-          label.classList.remove('is-checked');
-        });
-        form.querySelectorAll('[data-other-target]').forEach(function (sel) {
-          sel.dispatchEvent(new Event('change', { bubbles: true }));
-        });
+
       });
     });
   })();
