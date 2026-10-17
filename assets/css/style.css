@@ -2229,3 +2229,22 @@ select { font: inherit; color: inherit; }
 
 .case-table-hint { display: none; }
 @media (max-width: 600px) { .case-table-hint { display: block; font-size: 13px; color: var(--muted); margin-top: 12px; } }
+
+/* Contact clarity and readable conditions, October 2026. */
+.hero .hero__actions { margin-bottom: 16px; }
+.first-meeting { margin: 0 0 32px; max-width: 540px; color: var(--ink-soft); font-size: 15px; line-height: 1.65; }
+.demo-caption { margin: 14px 0 0; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
+#services .service__num { margin-bottom: 14px; }
+#services .service__guide { font-size: 14px; line-height: 1.5; color: var(--accent-text); font-weight: 600; margin-bottom: 18px; }
+#services .service--dark .service__guide { color: var(--paper); }
+.svc-note { font-family: var(--font-text); font-size: 14px; line-height: 1.65; letter-spacing: normal; text-transform: none; color: var(--muted); }
+.draft-notice .mono { font-family: var(--font-text); font-size: 15px; line-height: 1.5; font-weight: 600; color: var(--ink-soft); letter-spacing: normal; text-transform: none; }
+.draft-notice p { font-size: 15px; line-height: 1.65; }
+.contact-options .contact-options__note { color: #d1ccc5; font-size: 14px; line-height: 1.65; }
+.service__scope { font-size: 14px; line-height: 1.6; }
+.dfacts__price span { font-size: 14px; line-height: 1.6; }
+
+#services .service__list { font-family: var(--font-text); font-size: 13px; line-height: 1.65; }
+#services .service__list li + li { margin-top: 7px; }
+#services .service__more { font-size: 12px; }
+@media (min-width: 901px) { #services .service__guide { min-height: 42px; } }
